@@ -21,7 +21,7 @@ All thresholds live in [`screener/config.py`](screener/config.py).
 |---|---|
 | Operating cash flow | negative in 3+ of last 4 years |
 | Revenue (TTM) | < $10M |
-| Altman Z'' | < 1.1 (distress zone) |
+| Altman Z'' | < 1.1 (distress zone) **and** negative free cash flow |
 | Dilution | share count growing > 15%/yr |
 | Leverage | net debt / EBITDA > 4x, or net debt with negative EBITDA |
 

@@ -49,9 +49,12 @@ STATEMENT_OF = {
 def _series(rec, period, item):
     """[(date, value)] ascending for one line item, first matching row name wins."""
     stmt = rec.get(period, {}).get(STATEMENT_OF[item], {})
+    # yfinance names rows either "Total Revenue" or "TotalRevenue"; match both.
+    norm = {k.replace(" ", ""): v for k, v in stmt.items()}
     for row in ROWS[item]:
-        if row in stmt and stmt[row]:
-            return sorted(stmt[row].items())
+        vals = norm.get(row.replace(" ", ""))
+        if vals:
+            return sorted((d, v) for d, v in vals.items() if v == v)
     return []
 
 
@@ -241,8 +244,11 @@ def compute(rec, fx_rate):
         reasons.append("Revenue under $10M")
     if m["ocf_years"] >= 3 and m["ocf_negative_years"] > config.HARD["max_negative_ocf_years"]:
         reasons.append(f"Negative operating cash flow in {m['ocf_negative_years']} of last {m['ocf_years']} years")
-    if m["altman_z2"] is not None and m["altman_z2"] < config.HARD["min_altman_z2"]:
-        reasons.append(f"Altman Z'' {m['altman_z2']:.2f} (distress zone)")
+    # Z'' leans heavily on retained earnings, so old write-offs or buyback-funded deficits can
+    # put a cash-generative business in the "distress zone". Only exclude when cash isn't coming in.
+    if (m["altman_z2"] is not None and m["altman_z2"] < config.HARD["min_altman_z2"]
+            and not (m["fcf_ttm"] or 0) > 0):
+        reasons.append(f"Altman Z'' {m['altman_z2']:.2f} (distress zone) and negative free cash flow")
     if m["share_cagr"] is not None and m["share_cagr"] > config.HARD["max_share_growth"]:
         reasons.append(f"Share count growing {m['share_cagr']:.0%}/yr")
     if m["net_debt_ebitda"] is not None and m["net_debt_ebitda"] > config.HARD["max_net_debt_ebitda"]:

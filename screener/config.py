@@ -63,5 +63,8 @@ RICH_VS_SECTOR = 1.33
 
 # ---------------------------------------------------------------- fetching
 STATEMENT_REFRESH_DAYS = 7               # refresh a company's statements at least weekly
-FETCH_WORKERS = 3
+FETCH_WORKERS = 2
+FETCH_DELAY_SECONDS = 1.0                # per worker, between companies (be polite to Yahoo)
+RATE_LIMIT_PAUSE_SECONDS = 240           # all workers pause this long when Yahoo says "too many"
+MAX_RATE_LIMITS = 40                     # give up for the day after this many
 MAX_FETCH_MINUTES = 200                  # stop fetching and score what we have after this

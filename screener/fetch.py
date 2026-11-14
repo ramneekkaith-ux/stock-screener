@@ -54,13 +54,13 @@ def fetch_one(symbol):
         "fetched": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "info": {k: info.get(k) for k in INFO_KEYS if info.get(k) is not None},
         "annual": {
-            "income": _df_to_dict(t.get_income_stmt(freq="yearly")),
-            "balance": _df_to_dict(t.get_balance_sheet(freq="yearly")),
-            "cashflow": _df_to_dict(t.get_cashflow(freq="yearly")),
+            "income": _df_to_dict(t.get_income_stmt(freq="yearly", pretty=True)),
+            "balance": _df_to_dict(t.get_balance_sheet(freq="yearly", pretty=True)),
+            "cashflow": _df_to_dict(t.get_cashflow(freq="yearly", pretty=True)),
         },
         "quarterly": {
-            "income": _df_to_dict(t.get_income_stmt(freq="quarterly")),
-            "cashflow": _df_to_dict(t.get_cashflow(freq="quarterly")),
+            "income": _df_to_dict(t.get_income_stmt(freq="quarterly", pretty=True)),
+            "cashflow": _df_to_dict(t.get_cashflow(freq="quarterly", pretty=True)),
         },
         "insider": {},
     }
@@ -73,7 +73,9 @@ def fetch_one(symbol):
             label_col, shares_col = ip.columns[0], "Shares"
             for _, r in ip.iterrows():
                 try:
-                    rec["insider"][str(r[label_col])] = float(r[shares_col])
+                    val = float(r[shares_col])
+                    if val == val:
+                        rec["insider"][str(r[label_col])] = val
                 except (TypeError, ValueError, KeyError):
                     pass
     except Exception:
@@ -130,37 +132,44 @@ def refresh(symbols, cache, cache_path):
     deadline = time.time() + config.MAX_FETCH_MINUTES * 60
     lock = threading.Lock()
     stop = threading.Event()
+    pause = {"until": 0.0}
     stats = {"ok": 0, "failed": 0, "rate_limited": 0}
 
+    def wait_turn():
+        while time.time() < pause["until"] and not stop.is_set():
+            time.sleep(5)
+        time.sleep(config.FETCH_DELAY_SECONDS)
+
     def work(sym):
-        if stop.is_set() or time.time() > deadline:
-            return
         for attempt in range(3):
+            if stop.is_set() or time.time() > deadline:
+                return
+            wait_turn()
             try:
                 rec = fetch_one(sym)
                 with lock:
                     cache[sym] = rec
                     stats["ok"] += 1
-                    if stats["ok"] % 250 == 0:
+                    if stats["ok"] % 200 == 0:
                         log.info("fetched %d / %d", stats["ok"], len(todo))
                         save_cache(cache, cache_path)   # checkpoint
                 return
             except Exception as e:
-                name = type(e).__name__
-                if "RateLimit" in name or "Too Many Requests" in str(e):
+                if "RateLimit" in type(e).__name__ or "Too Many Requests" in str(e):
                     with lock:
                         stats["rate_limited"] += 1
-                        if stats["rate_limited"] > 12:
-                            log.error("Repeatedly rate-limited by Yahoo; stopping fetch for today")
+                        n = stats["rate_limited"]
+                        if time.time() >= pause["until"]:
+                            pause["until"] = time.time() + config.RATE_LIMIT_PAUSE_SECONDS
+                            log.warning("Rate-limited by Yahoo (%d); pausing %ss", n,
+                                        config.RATE_LIMIT_PAUSE_SECONDS)
+                        if n > config.MAX_RATE_LIMITS:
+                            log.error("Still rate-limited; stopping fetch for today")
                             stop.set()
-                            return
-                    time.sleep(90 * (attempt + 1))
-                else:
-                    if attempt == 2:
-                        with lock:
-                            stats["failed"] += 1
-                        log.debug("%s failed: %s", sym, e)
-                    time.sleep(2)
+                elif attempt == 2:
+                    with lock:
+                        stats["failed"] += 1
+                    log.debug("%s failed: %s", sym, e)
 
     with ThreadPoolExecutor(max_workers=config.FETCH_WORKERS) as ex:
         list(as_completed([ex.submit(work, s) for s in todo]))

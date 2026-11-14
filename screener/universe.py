@@ -64,26 +64,33 @@ def market_cap_usd(q, fx: FX):
     """Market cap in USD, computed from price x shares where possible."""
     price, shares = q.get("regularMarketPrice"), q.get("sharesOutstanding")
     cur = q.get("currency") or "USD"
+    r = fx.rate(cur)
+    if not r:
+        return None
     if price and shares:
-        return price * shares * fx.rate(cur)
+        return price * shares * r
     mc = q.get("marketCap")
     if mc is None:
         return None
     # Yahoo reports LSE market caps in GBP even though prices are in pence.
     if cur == "GBp":
-        cur = "GBP"
-    return mc * fx.rate(cur)
+        return mc * fx.rate("GBP")
+    return mc * r
 
 
 def build(fx: FX, now_ms=None):
     now_ms = now_ms or time.time() * 1000
     universe, rejected = {}, {"market_cap": 0, "liquidity": 0, "too_new": 0, "not_equity": 0,
-                              "industry": 0}
+                              "industry": 0, "foreign_line": 0}
     for market in config.MARKETS:
         for q in _page_through(_query(market), market):
             sym = q.get("symbol")
             if not sym or q.get("quoteType", "EQUITY") != "EQUITY":
                 rejected["not_equity"] += 1
+                continue
+            # LSE "0XXX.L" codes are overseas companies on the International Order Book.
+            if market == "UK" and sym.startswith("0"):
+                rejected["foreign_line"] += 1
                 continue
             if q.get("industry") in config.EXCLUDED_INDUSTRIES:
                 rejected["industry"] += 1
@@ -92,7 +99,7 @@ def build(fx: FX, now_ms=None):
             if mcap is None or not (config.MIN_MARKET_CAP_USD <= mcap <= config.MAX_MARKET_CAP_USD):
                 rejected["market_cap"] += 1
                 continue
-            price_usd = (q.get("regularMarketPrice") or 0) * fx.rate(q.get("currency") or "USD")
+            price_usd = (q.get("regularMarketPrice") or 0) * (fx.rate(q.get("currency") or "USD") or 0)
             adv = (q.get("averageDailyVolume3Month") or 0) * price_usd
             if adv < config.MIN_AVG_DAILY_VALUE_USD:
                 rejected["liquidity"] += 1

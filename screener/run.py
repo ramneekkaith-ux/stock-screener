@@ -71,7 +71,10 @@ def main():
         info = rec.get("info", {})
         if info.get("industry") in config.EXCLUDED_INDUSTRIES:
             continue
-        m = metrics.compute(rec, fx.rate(statement_currency(u, info)))
+        rate = fx.rate(statement_currency(u, info))
+        if not rate:
+            continue   # unknown reporting currency
+        m = metrics.compute(rec, rate)
         row = {**u, "sector": info.get("sector"), "industry": info.get("industry"),
                "country": info.get("country"), "website": info.get("website"),
                "summary": info.get("longBusinessSummary"), "data_as_of": rec.get("fetched"),
