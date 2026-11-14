@@ -189,7 +189,57 @@ def main():
                               v["market_cap_usd"], v["ev_ebit"], v["fcf_yield"], v["pe"],
                               v["implied_growth"], v["tag"], m.get("rev_cagr"),
                               m.get("fcf_margin"), m.get("roic_avg"), m.get("insider_pct")]))
+    write_dashboard_files(out)
     log.info("Done: %s", counts)
+
+
+def write_dashboard_files(out):
+    """Flat rows for the dashboard: one file per table."""
+    d = os.path.join(RESULTS, "dashboard")
+    os.makedirs(d, exist_ok=True)
+    rows = []
+    for s in out["stocks"]:
+        m, v, p = s["metrics"], s["valuation"], s["pillars"]
+        mus = lambda x: None if x is None else round(x / 1e6, 1)
+        row = {
+            "symbol": s["symbol"], "name": s["name"], "market": s["market"],
+            "exchange": s["exchange"], "sector": s["sector"], "industry": s["industry"],
+            "country": s["country"], "website": s["website"], "summary": s["summary"],
+            "tier": s["tier"], "score": s["score"],
+            "growth": p.get("growth"), "cashflow": p.get("cashflow"),
+            "quality": p.get("quality"), "management": p.get("management"),
+            "coverage": s["coverage"], "low_coverage": s["low_coverage"],
+            "is_new": s["is_new"], "prev_score": s["prev_score"],
+            "score_change": None if s["prev_score"] is None else round(s["score"] - s["prev_score"], 1),
+            "first_seen": s["first_seen"], "data_as_of": (s["data_as_of"] or "")[:10],
+            "mcap_musd": mus(v["market_cap_usd"]), "ev_ebit": v["ev_ebit"], "fcf_yield": v["fcf_yield"],
+            "pe": v["pe"], "ev_sales": v["ev_sales"], "implied_growth": v["implied_growth"],
+            "growth_gap": v["growth_gap"], "val_tag": v["tag"],
+            "revenue_musd": mus(m["revenue_ttm"]), "rev_cagr": m["rev_cagr"],
+            "rev_growth_years": m["rev_growth_years"], "rev_growth_periods": m["rev_growth_periods"],
+            "recent_growth": m["recent_growth"], "fcf_margin": m["fcf_margin"],
+            "fcf_conversion": m["fcf_conversion"], "roic_avg": m["roic_avg"],
+            "gross_margin": m["gross_margin"], "op_margin": m["operating_margin"],
+            "net_debt_ebitda": m["net_debt_ebitda"], "interest_coverage": m["interest_coverage"],
+            "altman_z2": m["altman_z2"], "piotroski": m["piotroski"], "insider_pct": m["insider_pct"],
+            "insider_net_pct": m["insider_net_pct"], "share_cagr": m["share_cagr"],
+        }
+        for k, pts in s["points"].items():
+            row[f"pts_{k}"] = pts
+        rows.append(row)
+    c = out["counts"]
+    summary = [{
+        "generated_at": out["generated_at"], "run_date": out["generated_at"][:10],
+        **c, "pass_score": out["settings"]["pass_score"], "watch_score": out["settings"]["watch_score"],
+        "fetch_deferred": out["fetch"].get("deferred", 0) if isinstance(out["fetch"], dict) else 0,
+        "gbpusd": out["fx"].get("GBP"),
+    }]
+    excl = [{"reason": k, "companies": n} for k, n in sorted(out["exclusion_counts"].items(), key=lambda x: -x[1])]
+    labels = [{"metric": k, "label": v["label"], "pillar": v["pillar"]} for k, v in out["metric_labels"].items()]
+    for name, data in [("stocks", rows), ("dropouts", out["dropouts"]), ("summary", summary),
+                       ("exclusions", excl), ("metric_labels", labels)]:
+        with open(os.path.join(d, f"{name}.json"), "w") as f:
+            json.dump(clean(data), f, separators=(",", ":"))
 
 
 if __name__ == "__main__":
