@@ -1,0 +1,11 @@
+{
+ "peers": [
+  "KARO",
+  "AIOT",
+  "TRMB",
+  "GRMN",
+  "VNT",
+  "IOT"
+ ],
+ "reason": "Vehicle telematics and connected-fleet platforms (Karooooo/Cartrack is the closest subscription peer); default set held unrelated instrument makers."
+}

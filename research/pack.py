@@ -188,7 +188,14 @@ def _peer_candidates(info, symbol, market):
 
 
 def peers(info, symbol, market, target_mcap_usd, fx):
-    cands = _peer_candidates(info, symbol, market)
+    override = os.path.join(PACKS, symbol, "peers.json")
+    curated = None
+    if os.path.exists(override):
+        with open(override) as f:
+            curated = json.load(f)          # {"peers": ["SYM", ...], "reason": "..."}
+        cands = {s: {"source": "Curated by analyst"} for s in curated["peers"]}
+    else:
+        cands = _peer_candidates(info, symbol, market)
     rows = []
     for sym, meta in list(cands.items())[:40]:
         pi = _safe(lambda: yf.Ticker(sym).get_info(), {}) or {}
@@ -217,6 +224,10 @@ def peers(info, symbol, market, target_mcap_usd, fx):
         time.sleep(0.3)
     if not rows:
         return []
+    if curated:
+        for r in rows:
+            r["role"] = "Curated peer"
+        return rows
     for r in rows:
         r["size_distance"] = abs(math.log(max(r["market_cap_usd"], 1) / max(target_mcap_usd, 1)))
     leaders = sorted([r for r in rows if r.get("leader_rank") is not None], key=lambda r: r["leader_rank"])[:2]

@@ -86,7 +86,8 @@ def default_inputs(pack):
     sbc = _median([r["sbc"] / r["revenue"] for r in a if r.get("sbc") and r.get("revenue")]) or 0.0
     why["reinvestment"] = (f"Historical medians: D&A {da:.1%}, capex {capex:.1%} of revenue; working capital "
                            f"{nwc:.1%} of revenue, so each extra $1 of sales ties up ${nwc:.2f}. Stock-based "
-                           f"compensation ({sbc:.1%} of revenue) is treated as a cash cost. IFRS reporters: "
+                           f"compensation ({sbc:.1%} of revenue) stays inside GAAP EBIT and is not added back, so "
+                           f"it is treated as a real cost. IFRS reporters: "
                            f"lease payments sit in financing cash flow, so check capex covers them.")
 
     # --- WACC
@@ -134,10 +135,10 @@ def _forecast(inp):
         da = rev * inp["da_pct"]
         capex = rev * inp["capex_pct"]
         dnwc = inp["nwc_pct"] * (rev - prev)
-        sbc = rev * inp.get("sbc_pct", 0)
+        sbc = rev * inp.get("sbc_pct", 0)   # memo only: already expensed inside GAAP EBIT
         rows.append({"year": t + 1, "revenue": rev, "growth": g, "ebit": ebit, "ebit_margin": m,
                      "nopat": nopat, "da": da, "ebitda": ebit + da, "capex": capex, "change_nwc": dnwc,
-                     "sbc": sbc, "fcff": nopat + da - capex - dnwc - sbc})
+                     "sbc": sbc, "fcff": nopat + da - capex - dnwc})
     return rows
 
 
