@@ -54,6 +54,7 @@ def price_chart(pack, out, years=3):
                         bbox=dict(boxstyle="round,pad=0.3", fc="#F1F3F6", ec=GREY, ls="--"),
                         arrowprops=dict(arrowstyle="-", color=GREY, ls="--"))
     ax.set_ylabel(f"Share price ({pack['currency']['price']})")
+    ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[1, 7]))
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
     ax.legend(frameon=False, fontsize=8, loc="upper left")
     ax.grid(axis="y", color="#E6E8EB", lw=0.6)
@@ -121,20 +122,28 @@ def football_field(pack, model, out):
     if not ff:
         return
     fig, ax = plt.subplots(figsize=(7.5, 0.55 * len(ff) + 1.2))
+    lows = [min(f["low"], f["high"]) for f in ff] + [model["price"]]
+    highs = [max(f["low"], f["high"]) for f in ff] + [model["price"]]
+    span = max(highs) - min(lows)
+    ax.set_xlim(max(0, min(lows) - 0.18 * span), max(highs) + 0.12 * span)
     for i, f in enumerate(reversed(ff)):
         lo, hi = sorted([f["low"], f["high"]])
         ax.barh(i, hi - lo, left=lo, color=NAVY, height=0.5)
-        ax.text(lo, i, f"{lo:,.1f} ", ha="right", va="center", fontsize=8)
-        ax.text(hi, i, f" {hi:,.1f}", ha="left", va="center", fontsize=8)
+        ax.text(lo, i, f"{lo:,.0f}  ", ha="right", va="center", fontsize=8)
+        ax.text(hi, i, f"  {hi:,.0f}", ha="left", va="center", fontsize=8)
     ax.set_yticks(range(len(ff)))
     ax.set_yticklabels([f["method"] for f in reversed(ff)], fontsize=8.5)
     price = model["price"]
     ax.axvline(price, color=RED, ls="--", lw=1.2)
-    ax.text(price, len(ff) - 0.4, f"Current {price:,.1f}", color=RED, fontsize=8, ha="center")
+    tp_ = model["target"]["price"] or price
+    ax.text(price, len(ff) - 0.4, ("Current " + f"{price:,.1f}  ") if tp_ >= price else f"  Current {price:,.1f}",
+            color=RED, fontsize=8, ha="right" if tp_ >= price else "left")
     if model["target"]["price"]:
         tp = model["target"]["price"]
         ax.axvline(tp, color=LIGHT, ls="--", lw=1.2)
-        ax.text(tp, -0.9, f"Target {tp:,.1f}", color="#3C6EA8", fontsize=8, ha="center")
+        right = tp >= price
+        ax.text(tp, len(ff) - 0.4, ("  " if right else "") + f"Target {tp:,.1f}" + ("" if right else "  "),
+                color="#3C6EA8", fontsize=8, ha="left" if right else "right")
     ax.set_xlabel(f"Implied value per share ({pack['currency']['price']})")
     ax.spines["left"].set_visible(False)
     ax.grid(axis="x", color="#E6E8EB", lw=0.6)
