@@ -12,7 +12,7 @@ import math
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 import numpy as np
 import pandas as pd
@@ -53,7 +53,7 @@ def _clean(x):
         return {str(k): _clean(v) for k, v in x.items()}
     if isinstance(x, (list, tuple)):
         return [_clean(v) for v in x]
-    if isinstance(x, (pd.Timestamp, datetime)):
+    if isinstance(x, (pd.Timestamp, datetime, date)):
         return x.isoformat()[:19]
     if isinstance(x, (np.integer,)):
         return int(x)
@@ -384,10 +384,10 @@ def main():
         d = os.path.join(PACKS, sym.replace("/", "_"))
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, "pack.json"), "w") as f:
-            json.dump(_clean(p), f, separators=(",", ":"))
+            json.dump(_clean(p), f, separators=(",", ":"), default=str)
         model = dcf.run(p, p["dcf_inputs"])
         with open(os.path.join(d, "dcf.json"), "w") as f:
-            json.dump(_clean(model), f, indent=1)
+            json.dump(_clean(model), f, indent=1, default=str)
         built.append(sym)
         log.info("%s: EV %.0f, DCF value/share %s, checks %s", sym, p["capital"]["enterprise_value"] or 0,
                  model["per_share"]["value_price_ccy"], [c["ok"] for c in p["checks"]])
