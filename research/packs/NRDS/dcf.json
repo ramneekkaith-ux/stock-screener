@@ -439,6 +439,7 @@
  },
  "flags": [
   "Gordon and exit-multiple values differ by -549%: check terminal assumptions.",
+  "DCF value per share is negative: default assumptions don't fit this business; set them from research.",
   "Negative free cash flow in the first 3 forecast years."
  ]
 }
