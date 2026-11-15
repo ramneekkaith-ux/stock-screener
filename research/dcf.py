@@ -263,6 +263,8 @@ def run(pack, inp):
         gap = exit_["per_share_price_ccy"] / base["per_share_price_ccy"] - 1
         if abs(gap) > 0.35:
             flags.append(f"Gordon and exit-multiple values differ by {gap:+.0%}: check terminal assumptions.")
+    if base["per_share_price_ccy"] is not None and base["per_share_price_ccy"] <= 0:
+        flags.append("DCF value per share is negative: default assumptions don't fit this business; set them from research.")
     if any(r["fcff"] < 0 for r in rows[:3]):
         flags.append("Negative free cash flow in the first 3 forecast years.")
 

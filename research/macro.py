@@ -18,9 +18,9 @@ def _fred_latest(series_id):
     url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
     req = urllib.request.Request(url, headers={"User-Agent": "stock-screener research"})
     last = None
-    for attempt in range(3):
+    for attempt in range(1):
         try:
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=20) as r:
                 rows = list(csv.reader(io.StringIO(r.read().decode())))
             break
         except Exception as e:
@@ -35,9 +35,18 @@ def _fred_latest(series_id):
     raise ValueError("no data")
 
 
+_CACHE = {}
+
+
 def risk_free(currency):
     """(rate, as_of, source) for the company's reporting currency; USD for anything else."""
     cur = "GBP" if currency in ("GBP", "GBp") else "USD"
+    if cur not in _CACHE:
+        _CACHE[cur] = _risk_free(cur)
+    return _CACHE[cur]
+
+
+def _risk_free(cur):
     sid, label = SERIES[cur]
     try:
         d, v = _fred_latest(sid)
