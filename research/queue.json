@@ -1,0 +1,348 @@
+{
+ "generated_at": "2026-11-15T01:07:05+00:00",
+ "queue": [
+  {
+   "symbol": "HRMY",
+   "name": "Harmony Biosciences Holdings, Inc.",
+   "market": "US",
+   "sector": "Healthcare",
+   "score": 90.6,
+   "value_score": 10.0,
+   "conviction": 93.4,
+   "tag": "cheap",
+   "fcf_yield": 0.1628
+  },
+  {
+   "symbol": "FNX.L",
+   "name": "Fonix Plc",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 89.8,
+   "value_score": 9.67,
+   "conviction": 91.9,
+   "tag": "cheap",
+   "fcf_yield": 0.0936
+  },
+  {
+   "symbol": "AFYA",
+   "name": "Afya Limited",
+   "market": "US",
+   "sector": "Consumer Defensive",
+   "score": 89.7,
+   "value_score": 10.0,
+   "conviction": 92.8,
+   "tag": "cheap",
+   "fcf_yield": 0.434
+  },
+  {
+   "symbol": "GMR.L",
+   "name": "Gaming Realms plc",
+   "market": "UK",
+   "sector": "Communication Services",
+   "score": 88.8,
+   "value_score": 9.67,
+   "conviction": 91.2,
+   "tag": "cheap",
+   "fcf_yield": 0.0815
+  },
+  {
+   "symbol": "BWMX",
+   "name": "Betterware de M\u00e9xico, S.A.P.I. de C.V.",
+   "market": "US",
+   "sector": "Consumer Cyclical",
+   "score": 88.8,
+   "value_score": 10.0,
+   "conviction": 92.2,
+   "tag": "cheap",
+   "fcf_yield": 0.2541
+  },
+  {
+   "symbol": "ELIX.L",
+   "name": "Elixirr International plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 85.9,
+   "value_score": 10.0,
+   "conviction": 90.1,
+   "tag": "cheap",
+   "fcf_yield": 0.1349
+  }
+ ],
+ "next_best": [
+  {
+   "symbol": "HRMY",
+   "name": "Harmony Biosciences Holdings, Inc.",
+   "market": "US",
+   "sector": "Healthcare",
+   "score": 90.6,
+   "value_score": 10.0,
+   "conviction": 93.4,
+   "tag": "cheap",
+   "fcf_yield": 0.1628
+  },
+  {
+   "symbol": "AFYA",
+   "name": "Afya Limited",
+   "market": "US",
+   "sector": "Consumer Defensive",
+   "score": 89.7,
+   "value_score": 10.0,
+   "conviction": 92.8,
+   "tag": "cheap",
+   "fcf_yield": 0.434
+  },
+  {
+   "symbol": "BWMX",
+   "name": "Betterware de M\u00e9xico, S.A.P.I. de C.V.",
+   "market": "US",
+   "sector": "Consumer Cyclical",
+   "score": 88.8,
+   "value_score": 10.0,
+   "conviction": 92.2,
+   "tag": "cheap",
+   "fcf_yield": 0.2541
+  },
+  {
+   "symbol": "FNX.L",
+   "name": "Fonix Plc",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 89.8,
+   "value_score": 9.67,
+   "conviction": 91.9,
+   "tag": "cheap",
+   "fcf_yield": 0.0936
+  },
+  {
+   "symbol": "IDHC.L",
+   "name": "Integrated Diagnostics Holdings plc",
+   "market": "UK",
+   "sector": "Healthcare",
+   "score": 89.5,
+   "value_score": 9.67,
+   "conviction": 91.7,
+   "tag": "cheap",
+   "fcf_yield": 0.0929
+  },
+  {
+   "symbol": "GMR.L",
+   "name": "Gaming Realms plc",
+   "market": "UK",
+   "sector": "Communication Services",
+   "score": 88.8,
+   "value_score": 9.67,
+   "conviction": 91.2,
+   "tag": "cheap",
+   "fcf_yield": 0.0815
+  },
+  {
+   "symbol": "ITRN",
+   "name": "Ituran Location and Control Ltd.",
+   "market": "US",
+   "sector": "Technology",
+   "score": 91.6,
+   "value_score": 9.0,
+   "conviction": 91.1,
+   "tag": "cheap",
+   "fcf_yield": 0.0829
+  },
+  {
+   "symbol": "NRDS",
+   "name": "NerdWallet, Inc.",
+   "market": "US",
+   "sector": "Communication Services",
+   "score": 86.2,
+   "value_score": 10.0,
+   "conviction": 90.3,
+   "tag": "cheap",
+   "fcf_yield": 0.5546
+  },
+  {
+   "symbol": "ABDP.L",
+   "name": "AB Dynamics plc",
+   "market": "UK",
+   "sector": "Consumer Cyclical",
+   "score": 86.2,
+   "value_score": 10.0,
+   "conviction": 90.3,
+   "tag": "cheap",
+   "fcf_yield": 0.1275
+  },
+  {
+   "symbol": "ELIX.L",
+   "name": "Elixirr International plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 85.9,
+   "value_score": 10.0,
+   "conviction": 90.1,
+   "tag": "cheap",
+   "fcf_yield": 0.1349
+  },
+  {
+   "symbol": "YELP",
+   "name": "Yelp Inc.",
+   "market": "US",
+   "sector": "Communication Services",
+   "score": 85.8,
+   "value_score": 10.0,
+   "conviction": 90.1,
+   "tag": "cheap",
+   "fcf_yield": 0.2373
+  },
+  {
+   "symbol": "TRN.L",
+   "name": "Trainline plc",
+   "market": "UK",
+   "sector": "Consumer Cyclical",
+   "score": 84.7,
+   "value_score": 10.0,
+   "conviction": 89.3,
+   "tag": "cheap",
+   "fcf_yield": 0.1251
+  },
+  {
+   "symbol": "ALFA.L",
+   "name": "Alfa Financial Software Holdings PLC",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 91.1,
+   "value_score": 8.33,
+   "conviction": 88.8,
+   "tag": "cheap",
+   "fcf_yield": 0.0632
+  },
+  {
+   "symbol": "BOKU.L",
+   "name": "Boku, Inc.",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 89.5,
+   "value_score": 8.67,
+   "conviction": 88.7,
+   "tag": "fair",
+   "fcf_yield": 0.1464
+  },
+  {
+   "symbol": "CAAS",
+   "name": "China Automotive Systems, Inc.",
+   "market": "US",
+   "sector": "Consumer Cyclical",
+   "score": 83.5,
+   "value_score": 10.0,
+   "conviction": 88.5,
+   "tag": "cheap",
+   "fcf_yield": 0.5287
+  },
+  {
+   "symbol": "GSL",
+   "name": "Global Ship Lease, Inc.",
+   "market": "US",
+   "sector": "Industrials",
+   "score": 83.2,
+   "value_score": 10.0,
+   "conviction": 88.2,
+   "tag": "cheap",
+   "fcf_yield": 0.1874
+  },
+  {
+   "symbol": "ACSO.L",
+   "name": "accesso Technology Group plc",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 82.8,
+   "value_score": 10.0,
+   "conviction": 88.0,
+   "tag": "cheap",
+   "fcf_yield": 0.1842
+  },
+  {
+   "symbol": "GLOP-PA",
+   "name": "GasLog Partners LP",
+   "market": "US",
+   "sector": "Energy",
+   "score": 82.7,
+   "value_score": 10.0,
+   "conviction": 87.9,
+   "tag": "cheap",
+   "fcf_yield": 0.2083
+  },
+  {
+   "symbol": "GLOP-PB",
+   "name": "GasLog Partners LP",
+   "market": "US",
+   "sector": "Energy",
+   "score": 82.7,
+   "value_score": 10.0,
+   "conviction": 87.9,
+   "tag": "cheap",
+   "fcf_yield": 0.1993
+  },
+  {
+   "symbol": "GLOP-PC",
+   "name": "GasLog Partners LP",
+   "market": "US",
+   "sector": "Energy",
+   "score": 82.7,
+   "value_score": 10.0,
+   "conviction": 87.9,
+   "tag": "cheap",
+   "fcf_yield": 0.2064
+  },
+  {
+   "symbol": "CMCL",
+   "name": "Caledonia Mining Corporation Plc",
+   "market": "US",
+   "sector": "Basic Materials",
+   "score": 82.0,
+   "value_score": 10.0,
+   "conviction": 87.4,
+   "tag": "cheap",
+   "fcf_yield": 0.123
+  },
+  {
+   "symbol": "GCT",
+   "name": "GigaCloud Technology Inc.",
+   "market": "US",
+   "sector": "Technology",
+   "score": 86.1,
+   "value_score": 9.0,
+   "conviction": 87.3,
+   "tag": "cheap",
+   "fcf_yield": 0.0702
+  },
+  {
+   "symbol": "SUP.L",
+   "name": "Supreme Plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 83.3,
+   "value_score": 9.67,
+   "conviction": 87.3,
+   "tag": "cheap",
+   "fcf_yield": 0.0909
+  },
+  {
+   "symbol": "SRB.L",
+   "name": "Serabi Gold plc",
+   "market": "UK",
+   "sector": "Basic Materials",
+   "score": 81.9,
+   "value_score": 10.0,
+   "conviction": 87.3,
+   "tag": "cheap",
+   "fcf_yield": 0.2097
+  },
+  {
+   "symbol": "TIGR",
+   "name": "UP Fintech Holding Limited",
+   "market": "US",
+   "sector": "Financial Services",
+   "score": 81.8,
+   "value_score": 10.0,
+   "conviction": 87.3,
+   "tag": "cheap",
+   "fcf_yield": 1.8272
+  }
+ ]
+}

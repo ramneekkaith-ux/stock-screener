@@ -2,3 +2,4 @@ yfinance>=1.8,<2
 pandas
 numpy
 pytest
+matplotlib
