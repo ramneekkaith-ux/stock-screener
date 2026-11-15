@@ -17,8 +17,16 @@ SERIES = {
 def _fred_latest(series_id):
     url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
     req = urllib.request.Request(url, headers={"User-Agent": "stock-screener research"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        rows = list(csv.reader(io.StringIO(r.read().decode())))
+    last = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                rows = list(csv.reader(io.StringIO(r.read().decode())))
+            break
+        except Exception as e:
+            last = e
+    else:
+        raise last
     for d, v in reversed(rows[1:]):
         try:
             return d, float(v) / 100
@@ -35,6 +43,15 @@ def risk_free(currency):
         d, v = _fred_latest(sid)
         return {"rate": v, "as_of": d, "source": label, "url": f"https://fred.stlouisfed.org/series/{sid}"}
     except Exception as e:
-        log.warning("FRED %s failed (%s); using fallback", sid, e)
-        return {"rate": config.FALLBACK_RISK_FREE[cur], "as_of": None,
-                "source": f"Fallback assumption (FRED {sid} unavailable)", "url": None}
+        log.warning("FRED %s failed (%s)", sid, e)
+    if cur == "USD":
+        try:
+            import yfinance as yf
+            h = yf.Ticker("^TNX").history(period="5d")["Close"].dropna()
+            return {"rate": float(h.iloc[-1]) / 100, "as_of": str(h.index[-1].date()),
+                    "source": "US 10-year Treasury yield (CBOE ^TNX via Yahoo Finance)",
+                    "url": "https://finance.yahoo.com/quote/%5ETNX"}
+        except Exception as e:
+            log.warning("^TNX failed (%s)", e)
+    return {"rate": config.FALLBACK_RISK_FREE[cur], "as_of": None,
+            "source": f"Fallback assumption (FRED {sid} unavailable)", "url": None}

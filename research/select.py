@@ -48,6 +48,8 @@ def candidates():
     for s in stocks:
         if s["tier"] != "Pass" or s["score"] < config.MIN_SCORE or s["coverage"] < config.MIN_COVERAGE:
             continue
+        if s.get("country") not in config.RESEARCH_COUNTRIES:
+            continue
         last = cov.get(s["symbol"], {}).get("date")
         if last and (today - date.fromisoformat(last)).days < config.RECOVER_AFTER_DAYS:
             continue

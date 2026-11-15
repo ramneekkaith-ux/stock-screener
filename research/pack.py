@@ -176,9 +176,10 @@ def _peer_candidates(info, symbol, market):
                 if s.get("industry") == info.get("industry"):
                     cands.setdefault(s["symbol"], {"source": "Screener universe (same industry)"})
     if market == "UK" and info.get("industry"):
-        q = yf.EquityQuery("and", [yf.EquityQuery("eq", ["industry", info["industry"]]),
-                                   yf.EquityQuery("is-in", ["exchange", "LSE"])])
-        resp = _safe(lambda: yf.screen(q, size=50, sortField="intradaymarketcap", sortAsc=False), {})
+        ind = info["industry"].replace(" - ", "—")
+        q = _safe(lambda: yf.EquityQuery("and", [yf.EquityQuery("eq", ["industry", ind]),
+                                                 yf.EquityQuery("is-in", ["exchange", "LSE"])]))
+        resp = _safe(lambda: yf.screen(q, size=50, sortField="intradaymarketcap", sortAsc=False), {}) if q else {}
         for qq in (resp or {}).get("quotes", []):
             if not qq["symbol"].startswith("0"):
                 cands.setdefault(qq["symbol"], {"source": "LSE same industry"})
@@ -260,7 +261,15 @@ def build(symbol, fx, screen_row=None):
     bench = [[d.strftime("%Y-%m-%d"), round(float(c), 2)] for d, c in bh["Close"].items()] if bh is not None and not bh.empty else []
 
     price = info.get("currentPrice") or info.get("regularMarketPrice") or (prices[-1][1] if prices else None)
-    shares = info.get("sharesOutstanding") or info.get("impliedSharesOutstanding")
+    # Yahoo's marketCap covers all share classes (sharesOutstanding can be one class only);
+    # for LSE it is in GBP while the price is in pence.
+    px_unit = 0.01 if px_cur == "GBp" else 1.0
+    if info.get("marketCap") and price:
+        shares = info["marketCap"] / (price * px_unit)
+        shares_src = "Yahoo market cap ÷ price (all share classes)"
+    else:
+        shares = info.get("sharesOutstanding") or info.get("impliedSharesOutstanding")
+        shares_src = "Yahoo shares outstanding"
     annual = derived_annual(rec)
     last = annual[-1] if annual else {}
     mcap_fin = price * shares * px_to_fin if price and shares else None
@@ -295,7 +304,7 @@ def build(symbol, fx, screen_row=None):
         "price": {"last": price, "currency": px_cur, "high_52w": info.get("fiftyTwoWeekHigh"),
                   "low_52w": info.get("fiftyTwoWeekLow"), "history_5y": prices,
                   "benchmark": {"symbol": bsym, "name": bname, "history_5y": bench}},
-        "capital": {"shares": shares, "market_cap": mcap_fin, "debt": debt, "cash": cash,
+        "capital": {"shares": shares, "shares_source": shares_src, "market_cap": mcap_fin, "debt": debt, "cash": cash,
                     "minority": minority, "preferred": preferred, "enterprise_value": ev_fin,
                     "market_cap_usd": mcap_fin * fin_to_usd if mcap_fin else None,
                     "as_of_balance_sheet": last.get("period_end")},
@@ -349,7 +358,7 @@ def checks(p):
     if c["market_cap"] and c["enterprise_value"] is not None:
         ev = c["market_cap"] + c["debt"] + c["minority"] + c["preferred"] - c["cash"]
         out.append({"check": "EV bridge adds up", "ok": abs(ev - c["enterprise_value"]) < 1})
-    yshares = p["info"].get("sharesOutstanding")
+    yshares = p["capital"]["shares"]
     bs = (p["annual"][-1].get("shares") if p["annual"] else None)
     if yshares and bs:
         diff = abs(yshares / bs - 1)

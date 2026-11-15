@@ -61,13 +61,14 @@ def default_inputs(pack):
     if cons:
         g = cons + [cons[-1]] * (2 - len(cons))
         why["growth"] = (f"Years 1–2 from analyst consensus ({n_an} analysts: {g[0]:.1%}, {g[1]:.1%}); "
-                         f"then a straight-line fade to {tg:.1%} terminal growth by year {n}.")
+                         f"then a straight-line fade to {tg:.1%} terminal growth by year {config.FADE_BY_YEAR}.")
     else:
         g0 = _clip(cagr, -0.05, 0.25)
         g = [g0, g0]
         why["growth"] = (f"No consensus available: years 1–2 at the {len(hist) - 1}-year historical revenue "
-                         f"CAGR ({cagr:.1%}, capped to -5%…25%), fading to {tg:.1%} by year {n}.")
-    path = g[:2] + [g[1] + (tg - g[1]) * (i - 1) / (n - 2) for i in range(2, n)]
+                         f"CAGR ({cagr:.1%}, capped to -5%…25%), fading to {tg:.1%} by year {config.FADE_BY_YEAR}.")
+    fade_to = config.FADE_BY_YEAR      # growth reaches terminal by this year, then stays there
+    path = g[:2] + [g[1] + (tg - g[1]) * min(i - 1, fade_to - 2) / (fade_to - 2) for i in range(2, n)]
 
     # --- margins & intensities
     em = [r.get("ebit_margin") for r in a]
@@ -82,8 +83,11 @@ def default_inputs(pack):
     da = _median([r.get("da_pct") for r in a]) or 0.03
     capex = _median([r.get("capex_pct") for r in a]) or da
     nwc = _clip(_median([r.get("nwc_pct") for r in a]) or 0.0, -0.3, 0.5)
+    sbc = _median([r["sbc"] / r["revenue"] for r in a if r.get("sbc") and r.get("revenue")]) or 0.0
     why["reinvestment"] = (f"Historical medians: D&A {da:.1%}, capex {capex:.1%} of revenue; working capital "
-                           f"{nwc:.1%} of revenue, so each extra $1 of sales ties up ${nwc:.2f}.")
+                           f"{nwc:.1%} of revenue, so each extra $1 of sales ties up ${nwc:.2f}. Stock-based "
+                           f"compensation ({sbc:.1%} of revenue) is treated as a cash cost. IFRS reporters: "
+                           f"lease payments sit in financing cash flow, so check capex covers them.")
 
     # --- WACC
     rf = pack["risk_free"]["rate"]
@@ -112,7 +116,7 @@ def default_inputs(pack):
         "base_year": base.get("period_end"), "base_revenue": rev0, "years": n,
         "revenue_growth": [round(x, 4) for x in path], "ebit_margin": [round(x, 4) for x in margins],
         "tax_rate": round(tax, 4), "da_pct": round(da, 4), "capex_pct": round(capex, 4),
-        "nwc_pct": round(nwc, 4), "terminal_growth": round(tg, 4), "exit_ebitda_multiple": exit_mult,
+        "nwc_pct": round(nwc, 4), "sbc_pct": round(sbc, 4), "terminal_growth": round(tg, 4), "exit_ebitda_multiple": exit_mult,
         "risk_free": rf, "beta_raw": braw, "beta_adjusted": round(b, 3), "erp": config.EQUITY_RISK_PREMIUM,
         "size_premium": config.SIZE_PREMIUM, "cost_of_equity": round(ke, 4), "cost_of_debt_pre_tax": round(kd, 4),
         "debt_weight": round(wd, 4), "wacc": round(wacc, 4), "mid_year": config.MID_YEAR,
@@ -130,9 +134,10 @@ def _forecast(inp):
         da = rev * inp["da_pct"]
         capex = rev * inp["capex_pct"]
         dnwc = inp["nwc_pct"] * (rev - prev)
+        sbc = rev * inp.get("sbc_pct", 0)
         rows.append({"year": t + 1, "revenue": rev, "growth": g, "ebit": ebit, "ebit_margin": m,
                      "nopat": nopat, "da": da, "ebitda": ebit + da, "capex": capex, "change_nwc": dnwc,
-                     "fcff": nopat + da - capex - dnwc})
+                     "sbc": sbc, "fcff": nopat + da - capex - dnwc - sbc})
     return rows
 
 

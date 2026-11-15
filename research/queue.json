@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T01:13:06+00:00",
+ "generated_at": "2026-11-15T01:19:45+00:00",
  "queue": [
   {
    "symbol": "HRMY",
@@ -24,37 +24,37 @@
    "fcf_yield": 0.0936
   },
   {
-   "symbol": "AFYA",
-   "name": "Afya Limited",
+   "symbol": "NRDS",
+   "name": "NerdWallet, Inc.",
    "market": "US",
-   "sector": "Consumer Defensive",
-   "score": 89.7,
-   "value_score": 10.0,
-   "conviction": 92.8,
-   "tag": "cheap",
-   "fcf_yield": 0.434
-  },
-  {
-   "symbol": "GMR.L",
-   "name": "Gaming Realms plc",
-   "market": "UK",
    "sector": "Communication Services",
-   "score": 88.8,
-   "value_score": 9.67,
-   "conviction": 91.2,
+   "score": 86.2,
+   "value_score": 10.0,
+   "conviction": 90.3,
    "tag": "cheap",
-   "fcf_yield": 0.0815
+   "fcf_yield": 0.5546
   },
   {
-   "symbol": "BWMX",
-   "name": "Betterware de M\u00e9xico, S.A.P.I. de C.V.",
-   "market": "US",
+   "symbol": "ABDP.L",
+   "name": "AB Dynamics plc",
+   "market": "UK",
    "sector": "Consumer Cyclical",
-   "score": 88.8,
+   "score": 86.2,
    "value_score": 10.0,
-   "conviction": 92.2,
+   "conviction": 90.3,
    "tag": "cheap",
-   "fcf_yield": 0.2541
+   "fcf_yield": 0.1275
+  },
+  {
+   "symbol": "CMCL",
+   "name": "Caledonia Mining Corporation Plc",
+   "market": "US",
+   "sector": "Basic Materials",
+   "score": 82.0,
+   "value_score": 10.0,
+   "conviction": 87.4,
+   "tag": "cheap",
+   "fcf_yield": 0.123
   },
   {
    "symbol": "ELIX.L",
@@ -79,28 +79,6 @@
    "conviction": 93.4,
    "tag": "cheap",
    "fcf_yield": 0.1628
-  },
-  {
-   "symbol": "AFYA",
-   "name": "Afya Limited",
-   "market": "US",
-   "sector": "Consumer Defensive",
-   "score": 89.7,
-   "value_score": 10.0,
-   "conviction": 92.8,
-   "tag": "cheap",
-   "fcf_yield": 0.434
-  },
-  {
-   "symbol": "BWMX",
-   "name": "Betterware de M\u00e9xico, S.A.P.I. de C.V.",
-   "market": "US",
-   "sector": "Consumer Cyclical",
-   "score": 88.8,
-   "value_score": 10.0,
-   "conviction": 92.2,
-   "tag": "cheap",
-   "fcf_yield": 0.2541
   },
   {
    "symbol": "FNX.L",
@@ -224,28 +202,6 @@
    "fcf_yield": 0.1464
   },
   {
-   "symbol": "CAAS",
-   "name": "China Automotive Systems, Inc.",
-   "market": "US",
-   "sector": "Consumer Cyclical",
-   "score": 83.5,
-   "value_score": 10.0,
-   "conviction": 88.5,
-   "tag": "cheap",
-   "fcf_yield": 0.5287
-  },
-  {
-   "symbol": "GSL",
-   "name": "Global Ship Lease, Inc.",
-   "market": "US",
-   "sector": "Industrials",
-   "score": 83.2,
-   "value_score": 10.0,
-   "conviction": 88.2,
-   "tag": "cheap",
-   "fcf_yield": 0.1874
-  },
-  {
    "symbol": "ACSO.L",
    "name": "accesso Technology Group plc",
    "market": "UK",
@@ -255,39 +211,6 @@
    "conviction": 88.0,
    "tag": "cheap",
    "fcf_yield": 0.1842
-  },
-  {
-   "symbol": "GLOP-PA",
-   "name": "GasLog Partners LP",
-   "market": "US",
-   "sector": "Energy",
-   "score": 82.7,
-   "value_score": 10.0,
-   "conviction": 87.9,
-   "tag": "cheap",
-   "fcf_yield": 0.2083
-  },
-  {
-   "symbol": "GLOP-PB",
-   "name": "GasLog Partners LP",
-   "market": "US",
-   "sector": "Energy",
-   "score": 82.7,
-   "value_score": 10.0,
-   "conviction": 87.9,
-   "tag": "cheap",
-   "fcf_yield": 0.1993
-  },
-  {
-   "symbol": "GLOP-PC",
-   "name": "GasLog Partners LP",
-   "market": "US",
-   "sector": "Energy",
-   "score": 82.7,
-   "value_score": 10.0,
-   "conviction": 87.9,
-   "tag": "cheap",
-   "fcf_yield": 0.2064
   },
   {
    "symbol": "CMCL",
@@ -334,15 +257,92 @@
    "fcf_yield": 0.2097
   },
   {
-   "symbol": "TIGR",
-   "name": "UP Fintech Holding Limited",
+   "symbol": "VMD",
+   "name": "Viemed Healthcare, Inc.",
    "market": "US",
-   "sector": "Financial Services",
-   "score": 81.8,
+   "sector": "Healthcare",
+   "score": 88.7,
+   "value_score": 8.33,
+   "conviction": 87.1,
+   "tag": "fair",
+   "fcf_yield": 0.0868
+  },
+  {
+   "symbol": "STRA",
+   "name": "Strategic Education, Inc.",
+   "market": "US",
+   "sector": "Consumer Defensive",
+   "score": 81.3,
    "value_score": 10.0,
-   "conviction": 87.3,
+   "conviction": 86.9,
    "tag": "cheap",
-   "fcf_yield": 1.8272
+   "fcf_yield": 0.1367
+  },
+  {
+   "symbol": "FLXS",
+   "name": "Flexsteel Industries, Inc.",
+   "market": "US",
+   "sector": "Consumer Cyclical",
+   "score": 84.0,
+   "value_score": 9.33,
+   "conviction": 86.8,
+   "tag": "cheap",
+   "fcf_yield": 0.1361
+  },
+  {
+   "symbol": "CMCL.L",
+   "name": "Caledonia Mining Corporation Plc",
+   "market": "UK",
+   "sector": "Basic Materials",
+   "score": 81.1,
+   "value_score": 10.0,
+   "conviction": 86.8,
+   "tag": "cheap",
+   "fcf_yield": 0.127
+  },
+  {
+   "symbol": "YU.L",
+   "name": "Y\u00fc Group PLC",
+   "market": "UK",
+   "sector": "Utilities",
+   "score": 82.3,
+   "value_score": 9.67,
+   "conviction": 86.6,
+   "tag": "cheap",
+   "fcf_yield": 0.096
+  },
+  {
+   "symbol": "CXM",
+   "name": "Sprinklr, Inc.",
+   "market": "US",
+   "sector": "Technology",
+   "score": 80.3,
+   "value_score": 10.0,
+   "conviction": 86.2,
+   "tag": "cheap",
+   "fcf_yield": 0.1238
+  },
+  {
+   "symbol": "COLL",
+   "name": "Collegium Pharmaceutical, Inc.",
+   "market": "US",
+   "sector": "Healthcare",
+   "score": 80.2,
+   "value_score": 10.0,
+   "conviction": 86.1,
+   "tag": "cheap",
+   "fcf_yield": 0.4274
+  },
+  {
+   "symbol": "ALTN.L",
+   "name": "AltynGold plc",
+   "market": "UK",
+   "sector": "Basic Materials",
+   "score": 81.5,
+   "value_score": 9.67,
+   "conviction": 86.0,
+   "tag": "cheap",
+   "fcf_yield": 0.1138
   }
  ]
 }
