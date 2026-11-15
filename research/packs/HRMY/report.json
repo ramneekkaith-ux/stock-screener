@@ -1,0 +1,256 @@
+{
+ "headline": "Harmony Biosciences: the market is pricing WAKIX as a melting ice cube, and the pipeline comes free",
+ "subheadline": "A ~$1bn drug with cover until 2030 and $775m of cash, valued at about 5x EBITDA. Lifecycle products are the swing factor",
+ "rating": "Buy",
+ "narrative": [
+  "WAKIX (pitolisant) is on track for more than $1bn of net revenue in 2026. Q3 2026 sales were $269m, and full-year guidance of $1.0–1.04bn was reiterated.",
+  "Generic entry is settled with 6 of 7 ANDA filers at no earlier than March 2030 if pediatric exclusivity is granted (September 2029 without it). That leaves roughly three more years of high-margin cash flow.",
+  "The company generated $323m of free cash flow over the last 12 months and holds $775m of cash against $164m of debt. Its enterprise value is only about 1.4x revenue.",
+  "Our WAKIX-only run-off DCF ($31) is close to the share price, so the market gives almost no value to pitolisant GR (PDUFA 1 April 2027), pitolisant HD (2028) or the BP-205 orexin agonist.",
+  "A 60/40 weighting of run-off and lifecycle-success scenarios gives a $39 target (+16%). Takeda's newly approved Orzeyful is the key competitive risk."
+ ],
+ "market_pricing": [
+  "At $33.76 the stock trades at about 5x EV/EBITDA and 11x earnings, against specialty-pharma peer medians of about 9x and 23x.",
+  "That discount is roughly what a 2030 patent cliff justifies. In our run-off case, revenue falls 45% in 2030 and keeps shrinking.",
+  "The stock fell after the October 2026 CEO succession news and a Q3 EPS miss on higher costs. The analyst median target is $49.50."
+ ],
+ "business": {
+  "title": "A one-product rare-CNS company building its next franchise",
+  "subtitle": "WAKIX for narcolepsy today; next-generation pitolisant and an orexin agonist in development",
+  "overview": [
+   "US commercial-stage pharma company based in Plymouth Meeting, Pennsylvania. It was founded by Paragon Biosciences.",
+   "WAKIX was approved by the FDA in August 2019 for narcolepsy. It is the only non-scheduled (non-controlled) treatment for excessive daytime sleepiness or cataplexy in narcolepsy.",
+   "COO Peter Anastasiou succeeds CEO Jeffrey Dayno, MD, on 1 January 2027.",
+   "Institutions own most of the free float. Insiders hold about 2%."
+  ],
+  "segments": [
+   {
+    "name": "WAKIX (essentially all revenue)",
+    "text": "Net revenue of $868.5m in 2025 and guided to $1.0–1.04bn in 2026. About 400 net patient adds a quarter."
+   },
+   {
+    "name": "Pipeline",
+    "text": "Pitolisant GR (NDA filed, PDUFA 1 Apr 2027), pitolisant HD (Phase 3 data 2027, target PDUFA 2028), BP-205 orexin-2 agonist (Phase 1b data Q1 2027), plus EPX-100 in epilepsy."
+   }
+  ],
+  "source": "Harmony Q3 2026 results (4 Nov 2026); Q4 2025 earnings call; company investor relations",
+  "financials_title": "Fast growth, high margins and growing free cash flow",
+  "financial_points": [
+   "Revenue grew from $438m (2022) to $868m (2025). The EBIT margin was 26–34% in each year.",
+   "Free cash flow was $348m in 2025, with almost no capex.",
+   "The Q3 2026 EPS miss came from higher costs (R&D and the commercial build) rather than demand: WAKIX added about 400 net patients."
+  ]
+ },
+ "industry": {
+  "title": "Narcolepsy treatment is entering a new drug class",
+  "subtitle": "Orexin agonists target the cause of narcolepsy type 1; WAKIX's niche is its non-controlled status",
+  "market": [
+   "Narcolepsy type 1 affects about 1 in 2,000 US adults and is caused by the loss of orexin-producing neurons.",
+   "Treatment mixes wake-promoting drugs, oxybates (Jazz's Xywav, Avadel's Lumryz) and stimulants. Many patients combine therapies.",
+   "WAKIX's advantage is that it is not a controlled substance, which makes prescribing and refills simpler."
+  ],
+  "tailwinds": [
+   {
+    "title": "Orexin science validated",
+    "text": "Takeda's Orzeyful approval (5 Aug 2026) validates the class Harmony is entering with BP-205."
+   },
+   {
+    "title": "Steady patient growth",
+    "text": "About 400 net patient adds a quarter for WAKIX through 2026."
+   }
+  ],
+  "headwinds": [
+   {
+    "title": "New competition",
+    "text": "Orzeyful treats narcolepsy type 1 as a whole, which could take share from symptomatic drugs once DEA scheduling is complete."
+   },
+   {
+    "title": "Generics",
+    "text": "Settled generic entry from March 2030 (or September 2029 without pediatric exclusivity)."
+   }
+  ],
+  "source": "Takeda / FDA announcements (Aug 2026); Pharma Now (6 Aug 2026); Harmony filings"
+ },
+ "competition": {
+  "title": "Cheap against specialty-pharma peers, for a visible reason",
+  "subtitle": "High returns today; the debate is how much survives 2030",
+  "points": [
+   "ROE was 18% in 2025 even with $775m of cash on the balance sheet. Few peers combine this growth with this margin.",
+   "Peers trade at about 9x EBITDA. Harmony trades at about 5x, because investors look past the patent cliff."
+  ],
+  "porter": [
+   [
+    "Rivalry",
+    "Oxybates (Jazz, Avadel), modafinil/armodafinil generics, stimulants and now orexin agonists (Takeda)."
+   ],
+   [
+    "Substitutes",
+    "Generic wake-promoters are cheap. WAKIX wins on being non-scheduled and well tolerated."
+   ],
+   [
+    "New entrants",
+    "High barriers (clinical trials, rare-disease salesforce) until patents expire."
+   ],
+   [
+    "Suppliers",
+    "Pitolisant is licensed from Bioprojet. The product depends on that licence."
+   ],
+   [
+    "Buyers",
+    "US payers. Rare-disease pricing has held up, but rebates can rise as competition grows."
+   ]
+  ],
+  "source": "Harmony 10-Q (Q1 2026); Harmony IR; peer data from Yahoo Finance"
+ },
+ "theses": [
+  {
+   "title": "1. Cash flow before 2030 covers most of the enterprise value",
+   "subtitle": "The patent cliff is real, but it is three-plus years away and already priced",
+   "points": [
+    "WAKIX is guided to $1.0–1.04bn in 2026. With almost no capex, most operating profit converts to cash.",
+    "In our run-off case, cumulative free cash flow from 2026 to 2029 alone is more than $1bn, against an EV of about $1.37bn.",
+    "Settlements with 6 of 7 generic filers fix the earliest entry date, which reduces the risk of an early surprise."
+   ],
+   "risk": "The remaining patent case goes against Harmony and allows earlier generic entry, or Orzeyful cuts WAKIX growth sharply before 2030.",
+   "evidence": {
+    "title": "Key numbers",
+    "metrics": [
+     {
+      "value": "$323m",
+      "label": "LTM free cash flow"
+     },
+     {
+      "value": "$775m",
+      "label": "Cash"
+     },
+     {
+      "value": "~5x",
+      "label": "EV / EBITDA"
+     }
+    ],
+    "points": [
+     "2026 WAKIX guidance: $1.0–1.04bn (reiterated 4 Nov 2026).",
+     "Earliest generic entry: March 2030 with pediatric exclusivity."
+    ]
+   },
+   "source": "Harmony Q3 2026 release; 10-Q (Q1 2026); analyst model"
+  },
+  {
+   "title": "2. Lifecycle products could keep the franchise alive past 2030",
+   "subtitle": "Pitolisant GR and HD carry patents filed to 2044",
+   "points": [
+    "Pitolisant GR (gastro-resistant) needs no dose titration. Its NDA is under FDA review, with a PDUFA date of 1 April 2027.",
+    "Pitolisant HD targets new indications. Phase 3 data are due in 2027, with a target PDUFA in 2028.",
+    "If even part of the WAKIX base moves to GR/HD before 2030, the revenue cliff becomes a slope. Our lifecycle scenario is worth $52 a share."
+   ],
+   "risk": "Payers and doctors treat GR as a minor reformulation and switch patients to generic pitolisant in 2030.",
+   "evidence": {
+    "title": "Scenario values per share",
+    "table": {
+     "header": [
+      "Scenario",
+      "Value"
+     ],
+     "rows": [
+      [
+       "WAKIX run-off (60%)",
+       "$30.58"
+      ],
+      [
+       "Lifecycle success (40%)",
+       "$52.40"
+      ],
+      [
+       "Weighted target",
+       "$39.31"
+      ]
+     ],
+     "widths": [
+      70,
+      30
+     ]
+    }
+   },
+   "source": "Harmony Q4 2025 call and Q3 2026 release; analyst scenarios"
+  },
+  {
+   "title": "3. BP-205 is a free option on the orexin class",
+   "subtitle": "Takeda's approval shows the class works; Harmony is aiming for best-in-class",
+   "points": [
+    "Multiple-ascending-dose data for BP-205 supported once-daily dosing, with no liver, visual or significant cardiovascular events reported.",
+    "Phase 1b data in sleep-deprived volunteers are due in Q1 2027, and Phase 2 studies across several CNS indications are planned by mid-2027.",
+    "Neither of our DCF scenarios gives any value to BP-205."
+   ],
+   "risk": "Clinical failure or safety signals. Orexin agonists have had liver and visual side effects in earlier programmes.",
+   "evidence": {
+    "title": "Upcoming readouts",
+    "points": [
+     "Q1 2027: BP-205 Phase 1b (sleep-deprived healthy volunteers).",
+     "1 Apr 2027: pitolisant GR PDUFA date.",
+     "2027: pitolisant HD Phase 3 topline; EPX-100 Phase 3 readouts."
+    ]
+   },
+   "source": "Harmony Q3 2026 release (BP-205 data, timelines)"
+  }
+ ],
+ "comps": {
+  "title": "Harmony trades at roughly half the peer multiple on EBITDA and earnings",
+  "subtitle": "The gap reflects a 2030 loss of exclusivity that peers do not face to the same degree",
+  "note": "Peers: US commercial-stage specialty and CNS pharma with marketed products."
+ },
+ "dcf": {
+  "subtitle": "Run-off case: 2026 guidance, slower growth as Orzeyful launches, then generic erosion from 2030; no pipeline value"
+ },
+ "valuation": {
+  "title": "The target leans on our scenarios, not on peer multiples",
+  "points": [
+   "Peer multiples imply $40–86 a share, but they ignore the 2030 cliff, so we show them only as a cross-check.",
+   "Our $39 target is below the analyst median ($49.50). The difference is mostly how much value each gives the pipeline."
+  ]
+ },
+ "risks": {
+  "title": "Competition and the patent cliff are the risks to watch",
+  "items": [
+   {
+    "risk": "Orzeyful (Takeda) takes share in narcolepsy type 1",
+    "mitigant": "WAKIX is non-scheduled and also used in type 2. Orzeyful still awaits DEA scheduling before launch."
+   },
+   {
+    "risk": "Earlier generic entry if the last ANDA case is lost",
+    "mitigant": "6 of 7 filers are already settled at 2029/2030 dates. Settlements anchor the timeline."
+   },
+   {
+    "risk": "Pipeline setbacks (GR, HD, BP-205)",
+    "mitigant": "Our base case gives the pipeline no value, and cash of $775m funds development."
+   }
+  ],
+  "catalysts": [
+   {
+    "when": "1 Jan 2027",
+    "what": "New CEO Peter Anastasiou takes over."
+   },
+   {
+    "when": "Q1 2027",
+    "what": "BP-205 Phase 1b data."
+   },
+   {
+    "when": "23 Feb 2027",
+    "what": "Q4 2026 results and 2027 guidance."
+   },
+   {
+    "when": "1 Apr 2027",
+    "what": "Pitolisant GR FDA decision."
+   }
+  ],
+  "source": "Harmony Q3 2026 release; Yahoo Finance earnings calendar; Takeda / FDA"
+ },
+ "references": [
+  "Harmony Q3 2026 results press release (4 Nov 2026), via Finviz / company IR: ir.harmonybiosciences.com",
+  "Harmony 10-Q for Q1 2026 (patent settlements): sec.gov/Archives/edgar/data/0001802665/000110465926056720/hrmy-20260331x10q.htm",
+  "Harmony Q4 2025 earnings call (generic entry timing, pipeline), MarketBeat / Yahoo Finance (24 Feb 2026)",
+  "Harmony–Lupin settlement press release, Business Wire (5 Jun 2025)",
+  "FDA approval of Takeda's Orzeyful (oveporexton), Business Wire (5 Aug 2026); Healio (7 Aug 2026)",
+  "Narcolepsy type 1 prevalence: Pharma Now (6 Aug 2026)",
+  "Financials, consensus, ownership and peer multiples: Yahoo Finance via research pack (15 Nov 2026)"
+ ]
+}

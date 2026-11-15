@@ -1,0 +1,59 @@
+{
+ "overrides": {
+  "ebit_margin": [
+   0.115,
+   0.115,
+   0.115,
+   0.115,
+   0.115,
+   0.115,
+   0.115,
+   0.115,
+   0.115,
+   0.115
+  ],
+  "terminal_growth": 0.01
+ },
+ "override_reasons": {
+  "ebit_margin": "Held near 2025's 12.6% GAAP operating margin less a little for the lower 2026 ad base; FY26 adjusted EBITDA guide $320\u2013325m with SBC ~7% and D&A ~5% of revenue implies ~10\u201311%.",
+  "terminal_growth": "1% rather than 2.5%: core advertising is shrinking (ad clicks -8% in Q3) and AI search is diverting local traffic."
+ },
+ "scenarios": {
+  "Stabilisation": {
+   "weight": 0.5,
+   "description": "Ad decline bottoms out; AI products and data licensing reach the $250m run-rate target.",
+   "overrides": {}
+  },
+  "Structural decline": {
+   "weight": 0.5,
+   "description": "AI answers keep cutting local-search clicks: revenue -4% a year, margins compress to 8%.",
+   "overrides": {
+    "revenue_growth": [
+     -0.0047,
+     -0.04,
+     -0.04,
+     -0.04,
+     -0.04,
+     -0.03,
+     -0.03,
+     -0.02,
+     -0.02,
+     -0.02
+    ],
+    "ebit_margin": [
+     0.115,
+     0.105,
+     0.095,
+     0.09,
+     0.085,
+     0.08,
+     0.08,
+     0.08,
+     0.08,
+     0.08
+    ],
+    "terminal_growth": -0.02
+   }
+  }
+ }
+}

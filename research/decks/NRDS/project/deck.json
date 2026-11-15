@@ -1,0 +1,66 @@
+{
+ "v": 5,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-15T02:08:12Z"
+ },
+ "lists": "css",
+ "format": {
+  "v": 1,
+  "shared": [
+   "project/deck.css"
+  ]
+ },
+ "title": "NerdWallet, Inc. (NRDS) – Initiation",
+ "cover": "cover",
+ "order": [
+  "cover",
+  "exec",
+  "exec2",
+  "business",
+  "financials",
+  "industry",
+  "competition",
+  "thesis1",
+  "thesis2",
+  "thesis3",
+  "comps",
+  "dcf",
+  "dcf2",
+  "valuation",
+  "risks",
+  "scorecard",
+  "wacc",
+  "refs",
+  "disclaimer"
+ ],
+ "sections": {
+  "s1": {
+   "description": "Summary",
+   "start": "cover"
+  },
+  "s2": {
+   "description": "Business, industry and competition",
+   "start": "business"
+  },
+  "s3": {
+   "description": "Investment theses",
+   "start": "thesis1"
+  },
+  "s4": {
+   "description": "Valuation",
+   "start": "comps"
+  },
+  "s5": {
+   "description": "Risks, screen and appendix",
+   "start": "risks"
+  }
+ },
+ "faces": {
+  "inter": {
+   "family": "Inter",
+   "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600"
+  }
+ },
+ "designSystems": []
+}

@@ -1,0 +1,41 @@
+{
+ "ITRN": {
+  "date": "2026-11-15",
+  "rating": "Buy",
+  "target": 57.89,
+  "price": 48.23,
+  "deck": "https://claude.ai/artifact/PchoPxffaQoyJf8UFjBYZi"
+ },
+ "HRMY": {
+  "date": "2026-11-15",
+  "rating": "Buy",
+  "target": 39.31,
+  "price": 33.76,
+  "deck": "https://claude.ai/artifact/2LxHhH48NJLkvZnb2GRNAf"
+ },
+ "NRDS": {
+  "date": "2026-11-15",
+  "rating": "Buy",
+  "target": 13.1,
+  "price": 7.46,
+  "deck": "https://claude.ai/artifact/VjCSd3pieTdh7iyoLJ642f"
+ },
+ "YELP": {
+  "date": "2026-11-15",
+  "rating": "Buy",
+  "target": 33.36,
+  "price": 20.34,
+  "deck": "https://claude.ai/artifact/3ttq71jZTsgGV9CrpQ8muz"
+ },
+ "GCT": {
+  "date": "2026-11-15",
+  "rating": "Hold",
+  "target": 75.32,
+  "price": 66.63,
+  "deck": "https://claude.ai/artifact/HtDNUAcYjNHySHiHEBtjhd"
+ },
+ "CMCL": {
+  "date": "2026-11-15",
+  "skipped": "Operations in Zimbabwe: DCF has no emerging-market country-risk adjustment"
+ }
+}

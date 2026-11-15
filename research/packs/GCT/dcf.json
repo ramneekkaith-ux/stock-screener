@@ -56,7 +56,14 @@
    "wacc": "CAPM: risk-free 5.15% (US 10-year Treasury yield (CBOE ^TNX via Yahoo Finance)) + adjusted beta 1.41 \u00d7 ERP 5.0% + small-cap premium 1.0% = cost of equity 13.19%. Pre-tax cost of debt 6.15% (interest \u00f7 debt). Market-value weights: debt 16.5%.",
    "exit_multiple": "Median peer EV/EBITDA (17.5x) as a cross-check terminal value."
   },
-  "overrides": {}
+  "overrides": {},
+  "override_reasons": {},
+  "exclude_peers": [
+   "PDD",
+   "W"
+  ],
+  "exclude_reason": "PDD's EV is distorted by net cash larger than market value; Wayfair barely earns EBIT, inflating its multiples.",
+  "scenarios": null
  },
  "forecast": [
   {
@@ -303,64 +310,64 @@
    "method": "EV / LTM revenue",
    "key": "ev_revenue",
    "peer_multiples": {
-    "p25": 0.92075,
-    "median": 1.2735,
-    "p75": 2.4415
+    "p25": 0.83,
+    "median": 1.193,
+    "p75": 2.804
    },
-   "n_peers": 6,
+   "n_peers": 5,
    "company_multiple": 1.5584616775456164,
    "implied_price": {
-    "p25": 38.749966845507075,
-    "median": 54.171797810087284,
-    "p75": 105.23543655319055
+    "p25": 34.78247950309558,
+    "median": 50.65242887274155,
+    "p75": 121.08352648844307
    }
   },
   {
    "method": "EV / LTM EBITDA",
    "key": "ev_ebitda",
    "peer_multiples": {
-    "p25": 16.48,
-    "median": 17.479999999999997,
-    "p75": 19.338
+    "p25": 16.433,
+    "median": 16.621,
+    "p75": 18.339
    },
-   "n_peers": 6,
+   "n_peers": 5,
    "company_multiple": 11.518339796702827,
    "implied_price": {
-    "p25": 95.97959926918172,
-    "median": 101.89487723393995,
-    "p75": 112.8854636924608
+    "p25": 95.70158120483808,
+    "median": 96.81365346221261,
+    "p75": 106.9761010056673
    }
   },
   {
    "method": "EV / LTM EBIT",
    "key": "ev_ebit",
    "peer_multiples": {
-    "p25": 17.721330956625074,
-    "median": 18.533941436975343,
-    "p75": 21.83193253993167
+    "p25": 16.36780723288992,
+    "median": 18.12763619680021,
+    "p75": 19.358439212714426
    },
-   "n_peers": 5,
+   "n_peers": 4,
    "company_multiple": 12.017753576043848,
    "implied_price": {
-    "p25": 98.96620780309428,
-    "median": 103.57327098506181,
-    "p75": 122.27110192903056
+    "p25": 91.2924582461701,
+    "median": 101.26973939407806,
+    "p75": 108.247728721054
    }
   },
   {
    "method": "P / E (LTM)",
    "key": "pe",
    "peer_multiples": {
-    "p25": 12.97036325,
-    "median": 16.968349,
-    "p75": 22.650769500000003
+    "p25": 14.344262,
+    "median": 19.592436,
+    "p75": 23.670214
    },
-   "n_peers": 6,
+   "n_peers": 5,
    "company_multiple": 13.998258330089758,
    "implied_price": {
-    "p25": 61.73734495882521,
-    "median": 80.76726884227676,
-    "p75": 107.81489641042528
+    "p25": 68.27693521025851,
+    "median": 93.25760247429504,
+    "p75": 112.66732772246867
    }
   }
  ],
@@ -368,34 +375,34 @@
   {
    "method": "EV / LTM revenue",
    "group": "Trading comparables",
-   "low": 38.749966845507075,
-   "high": 105.23543655319055,
-   "mid": 54.171797810087284,
-   "note": "0.9x\u20132.4x across 6 peers"
+   "low": 34.78247950309558,
+   "high": 121.08352648844307,
+   "mid": 50.65242887274155,
+   "note": "0.8x\u20132.8x across 5 peers"
   },
   {
    "method": "EV / LTM EBITDA",
    "group": "Trading comparables",
-   "low": 95.97959926918172,
-   "high": 112.8854636924608,
-   "mid": 101.89487723393995,
-   "note": "16.5x\u201319.3x across 6 peers"
+   "low": 95.70158120483808,
+   "high": 106.9761010056673,
+   "mid": 96.81365346221261,
+   "note": "16.4x\u201318.3x across 5 peers"
   },
   {
    "method": "EV / LTM EBIT",
    "group": "Trading comparables",
-   "low": 98.96620780309428,
-   "high": 122.27110192903056,
-   "mid": 103.57327098506181,
-   "note": "17.7x\u201321.8x across 5 peers"
+   "low": 91.2924582461701,
+   "high": 108.247728721054,
+   "mid": 101.26973939407806,
+   "note": "16.4x\u201319.4x across 4 peers"
   },
   {
    "method": "P / E (LTM)",
    "group": "Trading comparables",
-   "low": 61.73734495882521,
-   "high": 107.81489641042528,
-   "mid": 80.76726884227676,
-   "note": "13.0x\u201322.7x across 6 peers"
+   "low": 68.27693521025851,
+   "high": 112.66732772246867,
+   "mid": 93.25760247429504,
+   "note": "14.3x\u201323.7x across 5 peers"
   },
   {
    "method": "DCF \u2013 Gordon growth",
@@ -430,11 +437,12 @@
    "note": "Last 12 months"
   }
  ],
+ "scenarios": [],
  "target": {
-  "price": 73.46277074722809,
-  "upside": 0.10254796258784471,
+  "price": 75.31504821230082,
+  "upside": 0.13034741426235663,
   "rating": "Hold",
-  "method": "50% DCF (Gordon) + 25% EV/EBITDA comps median + 25% P/E comps median (re-weighted over whatever is available)",
+  "method": "Target = 50% DCF (Gordon growth) + 25% peer-median EV/EBITDA + 25% peer-median P/E",
   "bands": "Buy above +15%, Sell below -10%"
  },
  "flags": [

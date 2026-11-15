@@ -1,0 +1,72 @@
+{
+ "overrides": {
+  "revenue_growth": [
+   0.184,
+   0.08,
+   0.04,
+   0.02,
+   -0.45,
+   -0.4,
+   -0.2,
+   -0.1,
+   -0.05,
+   -0.05
+  ],
+  "ebit_margin": [
+   0.27,
+   0.29,
+   0.3,
+   0.3,
+   0.2,
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15
+  ],
+  "terminal_growth": -0.03
+ },
+ "override_reasons": {
+  "revenue_growth": "WAKIX-only run-off case. 2026 at the $1.0\u20131.04bn guidance; growth slows as Takeda's Orzeyful (approved 5 Aug 2026) enters narcolepsy type 1; generic pitolisant can launch from March 2030 (with pediatric exclusivity) under 6 of 7 ANDA settlements, so revenue falls 45% then 40%, then decays. No value given to pitolisant GR/HD or BP-205.",
+  "ebit_margin": "Operating leverage on ~$1bn sales to 2029, then cost cuts only partly offset the generic cliff.",
+  "terminal_growth": "Revenue keeps shrinking after exclusivity is lost."
+ },
+ "scenarios": {
+  "WAKIX run-off": {
+   "weight": 0.6,
+   "description": "Generics from 2030 take most of the franchise; no pipeline value.",
+   "overrides": {}
+  },
+  "Lifecycle success": {
+   "weight": 0.4,
+   "description": "Pitolisant GR (PDUFA 1 Apr 2027) and HD (patents to 2044) keep much of the franchise after 2030.",
+   "overrides": {
+    "revenue_growth": [
+     0.184,
+     0.08,
+     0.06,
+     0.05,
+     -0.15,
+     -0.1,
+     0.0,
+     0.02,
+     0.02,
+     0.02
+    ],
+    "ebit_margin": [
+     0.27,
+     0.29,
+     0.3,
+     0.3,
+     0.27,
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "terminal_growth": 0.01
+   }
+  }
+ }
+}

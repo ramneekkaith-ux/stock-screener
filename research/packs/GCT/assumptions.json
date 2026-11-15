@@ -1,0 +1,9 @@
+{
+ "overrides": {},
+ "override_reasons": {},
+ "exclude_peers": [
+  "PDD",
+  "W"
+ ],
+ "exclude_reason": "PDD's EV is distorted by net cash larger than market value; Wayfair barely earns EBIT, inflating its multiples."
+}

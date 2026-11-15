@@ -1,0 +1,244 @@
+{
+ "headline": "Ituran: a subscription compounder priced like a hardware seller",
+ "subheadline": "Recurring telematics revenue is growing faster than the market gives it credit for, and it is backed by net cash and a ~4% dividend",
+ "rating": "Buy",
+ "narrative": [
+  "Ituran sells stolen-vehicle recovery and connected-car services on monthly subscriptions. Subscriptions were 76% of revenue in Q2 2026 and grew 25% year on year.",
+  "Its 2.71 million subscribers are spread across Israel, where management claims an 85–90% telematics share, Brazil, other Latin American markets, India and the US.",
+  "Car-maker (OEM) deals such as Stellantis, BMW Motorrad and Yamaha bring in subscribers without retail marketing spend, and Ituran has added roughly 40,000 a quarter.",
+  "The business is highly cash-generative: record operating cash flow of $32.2m in Q2 2026, a $10m quarterly dividend, and net cash on the balance sheet.",
+  "At about 8x EV/EBITDA and 10x EV/EBIT, the stock trades well below telematics and connected-fleet peers (medians ~13x and ~21x) despite strong margins. Our target implies ~20% upside."
+ ],
+ "market_pricing": [
+  "At $48 the market values Ituran at about 8x EBITDA, 10x EBIT and 15x earnings, against peer medians of about 13x EBITDA and 21x EBIT.",
+  "The discount reflects Israeli and Brazilian country risk and currency swings (the shekel and the real).",
+  "Our DCF already adds a one-point country-risk premium to WACC. Even so, it supports about $50 per share, and the comps support more."
+ ],
+ "business": {
+  "title": "Telematics subscriptions across Israel and Latin America",
+  "subtitle": "Stolen-vehicle recovery, fleet management and connected-car services, sold through insurers, car makers and directly",
+  "overview": [
+   "Listed on Nasdaq; headquartered in Azour, Israel.",
+   "Revenue in Q3 2025 by region: Israel 55%, Brazil 23%, rest of world 22%.",
+   "Subscriber base: 2,711,000 at June 2026, up 163,000 year on year.",
+   "Led by co-CEOs from the founding Sheratzky family. Insiders hold about 20% of the shares."
+  ],
+  "segments": [
+   {
+    "name": "Subscription fees (76% of Q2 2026 revenue)",
+    "text": "Monthly fees for stolen-vehicle recovery, tracking, fleet management and usage-based insurance data. $80m in Q2 2026, up 25%."
+   },
+   {
+    "name": "Products (24%)",
+    "text": "Telematics devices sold to OEMs, dealers and fleets. $25.0m in Q2 2026, up 8%. Lower margin, but each unit sold brings a subscriber."
+   }
+  ],
+  "source": "Ituran Q2 2026 results (6-K, 12 Aug 2026); Q3 2025 earnings call",
+  "financials_title": "Steady growth with ~21% EBIT margins and rising free cash flow",
+  "financial_points": [
+   "Q2 2026: record revenue of $104.8m (+21%), EBITDA $28.5m (+24%), net income $17.3m (+29%).",
+   "Gross margin improved to 50.9% from 49.5% as high-margin subscriptions grew faster than devices.",
+   "Capital return: $10m quarterly dividend ($0.50 per share) plus buybacks."
+  ]
+ },
+ "industry": {
+  "title": "Vehicle telematics is moving from aftermarket boxes to factory-fitted services",
+  "subtitle": "Insurers, car makers and fleets all want connected-vehicle data",
+  "market": [
+   "Stolen-vehicle recovery is close to essential in Brazil and Israel, where insurers often require or reward a tracking device.",
+   "Car makers increasingly fit telematics at the factory and look for a service partner to run it, which is Ituran's OEM channel.",
+   "Fleet management and usage-based insurance add more data services on top of the same device."
+  ],
+  "tailwinds": [
+   {
+    "title": "OEM partnerships",
+    "text": "Stellantis, BMW Motorrad (Brazil) and Yamaha deals bring subscribers in at the factory, with no retail acquisition cost."
+   },
+   {
+    "title": "New services on the base",
+    "text": "IturanMob for rental fleets launched in Brazil and is piloting in the US (Orlando, New York). Ituran also won its first multi-year big-data traffic-monitoring contract (Sep 2026)."
+   }
+  ],
+  "headwinds": [
+   {
+    "title": "Country and FX risk",
+    "text": "Most revenue is earned in shekels and reais while Ituran reports in dollars. The swings move both earnings and the share price."
+   },
+   {
+    "title": "Connected cars",
+    "text": "Car makers' own built-in connectivity could, over time, reduce demand for aftermarket recovery devices."
+   }
+  ],
+  "source": "Ituran Q3 2025 and Q2 2026 results and calls; Ituran press release 9 Sep 2026"
+ },
+ "competition": {
+  "title": "A dominant home market and a scale position in Brazil",
+  "subtitle": "High returns on equity relative to larger connected-fleet peers",
+  "points": [
+   "In Israel, management claims an 85–90% telematics share, which makes it the default provider for insurers.",
+   "Profitability is high for its size: EBIT margins of about 21% and ROE of 27% in 2025."
+  ],
+  "porter": [
+   [
+    "Rivalry",
+    "Fragmented in Latin America (local trackers, insurer-owned services); near-monopoly in Israel."
+   ],
+   [
+    "Substitutes",
+    "Car makers' built-in connectivity and phone-based tracking are long-term substitutes for aftermarket devices."
+   ],
+   [
+    "New entrants",
+    "Low barriers for devices; high barriers for a recovery network (control centres, field teams, police links)."
+   ],
+   [
+    "Suppliers",
+    "Hardware components are commoditised; cellular connectivity is bought from several carriers."
+   ],
+   [
+    "Buyers",
+    "Insurers and OEMs negotiate hard on price, but switching a large installed base is costly."
+   ]
+  ],
+  "source": "Ituran earnings calls (Q3 2025, Q2 2026); peer data from Yahoo Finance"
+ },
+ "theses": [
+  {
+   "title": "1. Subscriptions are compounding faster than the multiple implies",
+   "subtitle": "The fastest-growing part of revenue is also the highest-margin part",
+   "points": [
+    "Subscription revenue grew 25% year on year in Q2 2026 and is now 76% of revenue. This is recurring income with high visibility.",
+    "Net adds have held at about 40,000 a quarter for over a year, with OEM channels adding to the base.",
+    "Profit is growing faster than revenue: in Q2, EBITDA rose 24% and net income 29% on revenue up 21%."
+   ],
+   "risk": "Net adds slow well below 30,000 a quarter, or subscription growth falls back to single digits.",
+   "evidence": {
+    "title": "Q2 2026 in numbers",
+    "metrics": [
+     {
+      "value": "+25%",
+      "label": "Subscription revenue YoY"
+     },
+     {
+      "value": "2.71m",
+      "label": "Subscribers"
+     },
+     {
+      "value": "76%",
+      "label": "Share of revenue"
+     }
+    ],
+    "points": [
+     "Q2 revenue was a record $104.8m.",
+     "Gross margin rose to 50.9% from 49.5%."
+    ]
+   },
+   "source": "Ituran Q2 2026 results (6-K) and earnings call"
+  },
+  {
+   "title": "2. Cash returns put a floor under the stock",
+   "subtitle": "A ~4% dividend yield and net cash protect the downside",
+   "points": [
+    "Ituran pays a $10m quarterly dividend ($0.50 per share), about a 4% yield at $48, and buys back shares as well.",
+    "Operating cash flow reached a record $32.2m in Q2 2026, comfortably covering the dividend.",
+    "Ituran holds net cash, so the dividend does not depend on borrowing, and there is room for acquisitions, which management prefers for expansion."
+   ],
+   "risk": "A large debt-funded acquisition, or a dividend cut to fund growth outside the core.",
+   "evidence": {
+    "title": "Capital return",
+    "metrics": [
+     {
+      "value": "$40m",
+      "label": "Annual dividend run-rate"
+     },
+     {
+      "value": "$32.2m",
+      "label": "Q2 2026 operating cash flow"
+     }
+    ],
+    "points": [
+     "The dividend was raised 25% in 2025, from $8m to $10m a quarter."
+    ]
+   },
+   "source": "Ituran 6-K filings; Q3 2025 earnings call"
+  },
+  {
+   "title": "3. New growth levers are optional upside",
+   "subtitle": "India, IturanMob in the US and data contracts are not in our numbers",
+   "points": [
+    "IturanMob, a platform for small and mid-sized rental companies, is piloting in Orlando and New York after launching in Brazil.",
+    "The Mercedes-Benz commercial-vehicle joint venture in India is low-margin today but long-dated.",
+    "The September 2026 big-data traffic-monitoring contract shows that the subscriber data has value beyond recovery."
+   ],
+   "risk": "These projects eat margin without reaching scale. Management has called India a long-term, low-margin bet.",
+   "evidence": {
+    "title": "What our base case leaves out",
+    "points": [
+     "Our DCF uses consensus growth of ~16% in 2026 and ~5% in 2027, fading to 2.5%. It does not assume any US or India success.",
+     "Any sign that IturanMob or the data business is gaining scale would be upside to the target."
+    ]
+   },
+   "source": "Ituran Q3 2025 earnings call; Ituran press release 9 Sep 2026; consensus via Yahoo Finance"
+  }
+ ],
+ "comps": {
+  "title": "Ituran trades at a discount to connected-vehicle peers on every multiple",
+  "subtitle": "Despite a higher EBITDA margin than most of the group",
+  "note": "Peers: vehicle-telematics and connected-fleet platforms plus Garmin as a consumer-device leader."
+ },
+ "dcf": {
+  "subtitle": "Consensus growth to 2027, fading to 2.5%; EBIT margin held near 21%; WACC raised one point for country risk"
+ },
+ "valuation": {
+  "title": "Nearly every method points above the share price",
+  "points": [
+   "The target blends our DCF with the value implied by the peer-median EV/EBITDA. Too few peers had a usable P/E.",
+   "Analyst consensus targets ($69–80) sit above ours. The two covering analysts both rate the stock a Buy."
+  ]
+ },
+ "risks": {
+  "title": "Country risk is the main debate; the business itself is resilient",
+  "items": [
+   {
+    "risk": "Geopolitical and currency risk (Israel, Brazil)",
+    "mitigant": "A WACC one point higher than the model, net cash, and dollar reporting with a natural hedge across several currencies."
+   },
+   {
+    "risk": "Slower subscriber growth if OEM ramps slip",
+    "mitigant": "A diversified base of 2.7m subscribers. Israel is mature but steady."
+   },
+   {
+    "risk": "Technology substitution by car makers' built-in connectivity",
+    "mitigant": "OEM partnerships turn the threat into a channel: Ituran runs the service behind factory-fitted units."
+   }
+  ],
+  "catalysts": [
+   {
+    "when": "24 Nov 2026",
+    "what": "Q3 2026 results: subscriber net adds and subscription growth."
+   },
+   {
+    "when": "Q1 2027",
+    "what": "FY2026 results and the 2027 net-add outlook."
+   },
+   {
+    "when": "2027",
+    "what": "IturanMob US pilots converting to paying fleets."
+   },
+   {
+    "when": "Ongoing",
+    "what": "Quarterly $10m dividend and buybacks."
+   }
+  ],
+  "source": "Ituran 6-K filings and earnings calls; analyst assessment"
+ },
+ "references": [
+  "Ituran Q2 2026 results, Form 6-K Exhibit 99.1 (12 Aug 2026): sec.gov/Archives/edgar/data/0001337117/000117891326004047/exhibit_99-1.htm",
+  "Ituran schedules Q3 2026 results (6-K, 20 Oct 2026): sec.gov/Archives/edgar/data/0001337117/000117891326004804/exhibit_99-1.htm",
+  "Ituran Q3 2025 earnings call summary, MarketBeat (18 Nov 2025)",
+  "Ituran Q2 2026 earnings call, StatementDog transcript (Aug 2026)",
+  "Ituran big-data traffic-monitoring contract, press release (9 Sep 2026)",
+  "Financial statements, consensus estimates, ownership and peer multiples: Yahoo Finance via research pack (15 Nov 2026)",
+  "Risk-free rate: US 10-year Treasury yield (CBOE ^TNX)"
+ ]
+}

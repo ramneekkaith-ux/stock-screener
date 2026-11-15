@@ -163,8 +163,8 @@ def _value(inp, rows, wacc, g, cap, shares, px_to_fin, method="gordon"):
             "tv_share_of_ev": pv_tv / ev if ev else None}
 
 
-def _comps(pack, px_to_fin):
-    peers = pack.get("peers", [])
+def _comps(pack, px_to_fin, exclude=()):
+    peers = [p for p in pack.get("peers", []) if p.get("symbol") not in set(exclude)]
     t, cap = pack["ttm"], pack["capital"]
     shares = cap["shares"]
     bridge = -cap["debt"] - cap["minority"] - cap["preferred"] + cap["cash"]
@@ -217,7 +217,7 @@ def run(pack, inp):
              for gg in g_grid] for w in w_grid]
     inner = [v for row in sens[1:4] for v in row[1:4] if v is not None]
 
-    comps = _comps(pack, px_to_fin)
+    comps = _comps(pack, px_to_fin, inp.get("exclude_peers", []))
     ff = []
     for c in comps:
         ip = c["implied_price"]
@@ -244,14 +244,28 @@ def run(pack, inp):
         ff.append({"method": "52-week trading range", "group": "Market", "low": pack["price"]["low_52w"],
                    "high": pack["price"]["high_52w"], "mid": price, "note": "Last 12 months"})
 
-    parts, weights = [], []
+    parts, weights, names = [], [], []
     if base["per_share_price_ccy"] and base["per_share_price_ccy"] > 0:
-        parts.append(base["per_share_price_ccy"]); weights.append(0.5)
-    for key in ("ev_ebitda", "pe"):
+        parts.append(base["per_share_price_ccy"]); weights.append(0.5); names.append("DCF (Gordon growth)")
+    for key, label in (("ev_ebitda", "peer-median EV/EBITDA"), ("pe", "peer-median P/E")):
         c = next((c for c in comps if c["key"] == key and c["implied_price"]["median"]), None)
         if c and c["implied_price"]["median"] > 0:
-            parts.append(c["implied_price"]["median"]); weights.append(0.25)
+            parts.append(c["implied_price"]["median"]); weights.append(0.25); names.append(label)
     target = sum(p * w for p, w in zip(parts, weights)) / sum(weights) if parts else None
+    tw = sum(weights) or 1
+    method = "Target = " + " + ".join(f"{w / tw:.0%} {n}" for w, n in zip(weights, names))
+    scen_out = []
+    if inp.get("scenarios"):
+        tot = 0
+        for name, sc in inp["scenarios"].items():
+            sinp = {**inp, **sc.get("overrides", {})}
+            srows = _forecast(sinp)
+            v = _value(sinp, srows, sinp["wacc"], sinp["terminal_growth"], cap, shares, px_to_fin)["per_share_price_ccy"]
+            scen_out.append({"name": name, "weight": sc["weight"], "value": v, "description": sc.get("description")})
+            tot += sc["weight"] * v
+        target = tot / sum(x["weight"] for x in scen_out)
+        method = "Probability-weighted DCF scenarios: " + ", ".join(
+            f"{x['name']} {x['weight']:.0%}" for x in scen_out) + " (comps shown as a cross-check)"
     upside = target / price - 1 if target and price else None
     rating = None if upside is None else ("Buy" if upside > config.BUY_ABOVE else
                                          "Sell" if upside < config.SELL_BELOW else "Hold")
@@ -277,9 +291,8 @@ def run(pack, inp):
                       "upside": base["per_share_price_ccy"] / price - 1 if base["per_share_price_ccy"] and price else None},
         "sensitivity": {"wacc": w_grid, "terminal_growth": g_grid, "value_per_share_price_ccy": sens},
         "comps": comps, "football_field": ff,
-        "target": {"price": target, "upside": upside, "rating": rating,
-                   "method": "50% DCF (Gordon) + 25% EV/EBITDA comps median + 25% P/E comps median "
-                             "(re-weighted over whatever is available)",
+        "scenarios": scen_out,
+        "target": {"price": target, "upside": upside, "rating": rating, "method": method,
                    "bands": f"Buy above +{config.BUY_ABOVE:.0%}, Sell below {config.SELL_BELOW:.0%}"},
         "flags": flags,
     }
@@ -294,7 +307,9 @@ def main():
     ap = os.path.join(d, "assumptions.json")
     if os.path.exists(ap):
         with open(ap) as f:
-            inp = {**inp, **json.load(f)}
+            a = json.load(f)
+        inp = {**inp, "overrides": a.get("overrides", {}), "override_reasons": a.get("override_reasons", {}),
+               "exclude_peers": a.get("exclude_peers", []), "exclude_reason": a.get("exclude_reason"), "scenarios": a.get("scenarios")}
     out = run(pack, inp)
     with open(os.path.join(d, "dcf.json"), "w") as f:
         json.dump(out, f, indent=1, default=float)

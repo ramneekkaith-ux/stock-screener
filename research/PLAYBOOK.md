@@ -67,3 +67,12 @@ business has changed so much that history is meaningless. Pick the best remainin
 A separate reviewer agent (fresh context) checks every number on every slide against `pack.json`,
 `dcf.json` and the cited URLs, checks the arithmetic (EV bridge, upside, totals), and lists issues.
 Fix them, then record the report in `research/coverage.json` with date, rating and target.
+
+## Step 6 — Build and publish the deck
+1. `python -m research.charts <T>` (after any assumption change).
+2. Create a Claude Slides deck titled "<Name> (<T>) – Initiation", upload the four charts in
+   `research/packs/<T>/charts/` to it, and save their `/_blob/...` links as
+   `research/packs/<T>/assets.json` (`price_3y`, `financials`, `peers`, `football_field`).
+3. Write `research/packs/<T>/report.json` (same keys as the existing ones, e.g. `ITRN`).
+4. `python -m research.render_slides <T>` → publish every file under `research/decks/<T>/project/`.
+5. Record it in `research/coverage.json` (date, rating, target, price, deck link) and commit.

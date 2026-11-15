@@ -1,0 +1,57 @@
+{
+ "overrides": {
+  "ebit_margin": [
+   0.065,
+   0.075,
+   0.085,
+   0.09,
+   0.1,
+   0.1,
+   0.1,
+   0.1,
+   0.1,
+   0.1
+  ]
+ },
+ "override_reasons": {
+  "ebit_margin": "Starts at the 2026 GAAP operating-income guide ($56\u201362m) and recovers toward 10% as auto-insurance carrier partnerships are rebuilt; the model's default leaned on loss-making 2022\u201324."
+ },
+ "scenarios": {
+  "Recovery": {
+   "weight": 0.5,
+   "description": "Auto-insurance carrier partnerships are rebuilt; margins recover toward 10%.",
+   "overrides": {}
+  },
+  "AI disruption": {
+   "weight": 0.5,
+   "description": "AI search erodes organic traffic: revenue flat then shrinking, margins stuck near 6%.",
+   "overrides": {
+    "revenue_growth": [
+     0.0335,
+     0.0,
+     -0.02,
+     -0.02,
+     -0.02,
+     -0.02,
+     -0.02,
+     -0.01,
+     -0.01,
+     -0.01
+    ],
+    "ebit_margin": [
+     0.065,
+     0.06,
+     0.06,
+     0.06,
+     0.06,
+     0.06,
+     0.06,
+     0.06,
+     0.06,
+     0.06
+    ],
+    "terminal_growth": 0.0
+   }
+  }
+ }
+}

@@ -1,0 +1,263 @@
+{
+ "headline": "Yelp: a cash machine priced for terminal decline",
+ "subheadline": "Advertising is shrinking, but AI products and data licensing are growing fast, and the stock trades at ~3x EBITDA",
+ "rating": "Buy",
+ "narrative": [
+  "Yelp connects consumers with local businesses and earns most of its revenue from advertising by restaurants, retailers and service businesses.",
+  "Q3 2026 revenue fell 1% to $371m: advertising was down 6% as ad clicks fell 8%. Other revenue (Hatch, data licensing, food ordering) rose 82%.",
+  "Profitability is intact: Q3 adjusted EBITDA was $92m (25% margin) and free cash flow $85m. Yelp bought back ~$200m of stock in 2026 to date.",
+  "At $20.34 the shares trade at about 3x EV/EBITDA, roughly 5x EBIT and 9x earnings, with net cash. That valuation implies a long, steep decline.",
+  "Even our structural-decline case (revenue –4% a year) is worth $25. A 50/50 blend with stabilisation gives a $33 target, but the debate is real."
+ ],
+ "market_pricing": [
+  "The stock is down about 55% over three years, as AI answers threaten local-search traffic.",
+  "Full-year 2026 revenue guidance was cut for the second straight quarter, to $1.455–1.460bn.",
+  "Analysts are negative: 2 Buy, 6 Hold, 3 Sell or Strong Sell, with a median target of $22."
+ ],
+ "business": {
+  "title": "Local reviews and advertising, adding AI services and data licensing",
+  "subtitle": "About 509,000 paying advertising locations, plus a fast-growing 'other revenue' line",
+  "overview": [
+   "Headquartered in San Francisco and led by co-founder and CEO Jeremy Stoppelman.",
+   "Advertising is sold mainly to Services businesses (home and local services) and to Restaurants, Retail & Other (RR&O).",
+   "Yelp acquired Hatch (AI customer-communication software for service pros) in 2026: $264m of acquisition-related cash outflow year to date."
+  ],
+  "segments": [
+   {
+    "name": "Advertising (91% of Q3 revenue)",
+    "text": "Services $238m (–2%), RR&O $99m (–13%). Average cost per click +2%, ad clicks –8%."
+   },
+   {
+    "name": "Other revenue (9%)",
+    "text": "$34m, up 82%: Hatch (~$37m annual run rate), data licensing with OpenAI and Meta, and food ordering. Target: $250m run rate by end-2028."
+   }
+  ],
+  "source": "Yelp Q3 2026 shareholder letter (8-K, 5 Nov 2026)",
+  "financials_title": "Flat revenue, but margins doubled since 2022 and free cash flow is strong",
+  "financial_points": [
+   "Revenue rose from $1.19bn (2022) to $1.47bn (2025). The EBIT margin improved from 5% to 13% as stock-based compensation fell.",
+   "2026 guidance: revenue $1.455–1.460bn and adjusted EBITDA $320–325m. SBC is ~7% of revenue and D&A ~5%.",
+   "Buybacks are paused to repay a $75m revolver drawing (used for Hatch). They are expected to resume in 2027."
+  ]
+ },
+ "industry": {
+  "title": "Local search is being rewired by AI",
+  "subtitle": "Fewer clicks reach publishers, but local data and reviews become more valuable to AI platforms",
+  "market": [
+   "Local advertising follows small-business health. Yelp says restaurants, retail and home services are under pressure.",
+   "Industry studies suggest AI Overviews now appear in about 68% of local searches, which cuts click-throughs to sites like Yelp.",
+   "Yelp's content (reviews, photos, business data) is now licensed to AI companies, a new revenue stream."
+  ],
+  "tailwinds": [
+   {
+    "title": "Data licensing",
+    "text": "Agreements with OpenAI and Meta drove the 82% rise in other revenue. Reservations and Waitlist are integrated into ChatGPT."
+   },
+   {
+    "title": "AI products",
+    "text": "Yelp Host (2.5m annual run-rate calls, up 15x) and Smart Lead Reply (launching Q4 2026)."
+   }
+  ],
+  "headwinds": [
+   {
+    "title": "Click erosion",
+    "text": "Ad clicks fell 8% in Q3 2026, after a 5% fall in Q2."
+   },
+   {
+    "title": "SMB weakness",
+    "text": "Services advertising declined for the first time in at least nine quarters."
+   }
+  ],
+  "source": "Yelp Q3 2026 letter; PPC Land (Nov 2026); BriefGlance (Nov 2026); MarketBeat call summary (8 Nov 2026)"
+ },
+ "competition": {
+  "title": "The cheapest name among online local and vertical marketplaces",
+  "subtitle": "Higher returns on equity than most peers, at a fraction of the multiple",
+  "points": [
+   "ROE rose to about 20% in 2025 as margins expanded and the share count fell.",
+   "Google is the dominant competitor for local intent; Angi and Thumbtack compete in home services."
+  ],
+  "porter": [
+   [
+    "Rivalry",
+    "Google Maps/Search, Angi, Thumbtack, TripAdvisor, food-delivery apps for restaurants."
+   ],
+   [
+    "Substitutes",
+    "AI assistants that answer 'best plumber near me' directly."
+   ],
+   [
+    "New entrants",
+    "The barrier is 20 years of reviews and a trusted brand. That data is hard to rebuild."
+   ],
+   [
+    "Suppliers",
+    "Traffic from Google and Apple; data partners (OpenAI, Meta) are also customers."
+   ],
+   [
+    "Buyers",
+    "Hundreds of thousands of small advertisers, each with little power, but quick to cut budgets."
+   ]
+  ],
+  "source": "Yelp filings; peer data from Yahoo Finance"
+ },
+ "theses": [
+  {
+   "title": "1. The valuation assumes a decline worse than our bear case",
+   "subtitle": "Yelp generates ~$260m of free cash flow on an EV of ~$810m",
+   "points": [
+    "EV/EBITDA is about 3.3x and P/E about 9x, against peer medians of about 9x and 17x.",
+    "Our structural-decline case assumes revenue falls 4% a year for five years and margins compress to 8%. It still gives $25 a share.",
+    "Net cash and ~$100m of quarterly operating cash flow give the company room to fund the pivot."
+   ],
+   "risk": "Revenue falls much faster than 4% a year as AI answers take over local discovery.",
+   "evidence": {
+    "title": "Valuation snapshot",
+    "metrics": [
+     {
+      "value": "3.3x",
+      "label": "EV / LTM EBITDA"
+     },
+     {
+      "value": "$263m",
+      "label": "LTM free cash flow"
+     },
+     {
+      "value": "~55%",
+      "label": "3-year share price fall"
+     }
+    ]
+   },
+   "source": "Yahoo Finance via research pack; analyst scenarios"
+  },
+  {
+   "title": "2. 'Other revenue' is a real second engine",
+   "subtitle": "Up 82% to a $136m run rate, targeting $250m by end-2028",
+   "points": [
+    "Hatch's run-rate revenue reached ~$37m, up 55% year on year, with integrations into ServiceTitan, Housecall Pro, Jobber and Workiz.",
+    "Data licensing with OpenAI and Meta turns AI from only a threat into a customer.",
+    "If other revenue reaches $250m, it would offset most of a mid-single-digit advertising decline."
+   ],
+   "risk": "Data-licensing deals are not renewed, or prices fall as AI companies find alternative data.",
+   "evidence": {
+    "title": "Other revenue",
+    "metrics": [
+     {
+      "value": "+82%",
+      "label": "Q3 2026 YoY"
+     },
+     {
+      "value": "$136m",
+      "label": "Annual run rate"
+     },
+     {
+      "value": "$250m",
+      "label": "End-2028 target"
+     }
+    ]
+   },
+   "source": "Yelp Q3 2026 shareholder letter"
+  },
+  {
+   "title": "3. Capital return will restart in 2027",
+   "subtitle": "~$200m bought back in 2026 to date; $339m of authorisation left",
+   "points": [
+    "Yelp repurchased about $200m of stock in 2026 to date, about 18% of today's market value.",
+    "Buybacks are paused only to repay the $75m revolver drawn for Hatch, and are expected to resume in 2027.",
+    "At about 3x EBITDA, buybacks are among the best uses of cash available to management."
+   ],
+   "risk": "Further large acquisitions divert cash from buybacks.",
+   "evidence": {
+    "title": "Capital allocation",
+    "table": {
+     "header": [
+      "Item",
+      "Value"
+     ],
+     "rows": [
+      [
+       "Buybacks 2026 YTD",
+       "~$200m"
+      ],
+      [
+       "Remaining authorisation",
+       "$339m"
+      ],
+      [
+       "Cash (30 Sep 2026)",
+       "$120m"
+      ],
+      [
+       "Revolver drawn",
+       "$75m"
+      ]
+     ],
+     "widths": [
+      62,
+      38
+     ]
+    }
+   },
+   "source": "Yelp Q3 2026 shareholder letter"
+  }
+ ],
+ "comps": {
+  "title": "Yelp trades at a deep discount to local and vertical marketplaces",
+  "subtitle": "About 3x EBITDA vs a peer median of about 9x",
+  "note": "Peers: local, travel and vertical marketplaces selling advertising or leads to small businesses."
+ },
+ "dcf": {
+  "subtitle": "Stabilisation case: revenue flat in 2026–27, then low growth; EBIT margin 11.5%; terminal growth cut to 1%"
+ },
+ "valuation": {
+  "title": "Most methods point well above the share price; analyst targets do not",
+  "points": [
+   "Our $33 target is well above the $22 analyst median. We think consensus capitalises the advertising decline but not the cash flow and the new revenue lines.",
+   "The structural-decline scenario is the floor we watch: $25."
+  ]
+ },
+ "risks": {
+  "title": "AI search is the central risk; the balance sheet buys time",
+  "items": [
+   {
+    "risk": "AI answers keep cutting clicks and ad revenue",
+    "mitigant": "Data licensing, Yelp Assistant and ChatGPT integrations turn AI into a distribution channel."
+   },
+   {
+    "risk": "Small-business ad budgets keep shrinking",
+    "mitigant": "Cost discipline (product development costs –17% in Q3) keeps margins near 25% adjusted EBITDA."
+   },
+   {
+    "risk": "Hatch integration and the M&A strategy",
+    "mitigant": "Hatch grew 55% after the deal. The revolver is being repaid before buybacks restart."
+   }
+  ],
+  "catalysts": [
+   {
+    "when": "Q4 2026",
+    "what": "Smart Lead Reply launch; ~$30m tax benefit."
+   },
+   {
+    "when": "11 Feb 2027",
+    "what": "Q4 2026 results and 2027 outlook."
+   },
+   {
+    "when": "2027",
+    "what": "Buybacks resume once the revolver is repaid."
+   },
+   {
+    "when": "End-2028",
+    "what": "$250m other-revenue run-rate target."
+   }
+  ],
+  "source": "Yelp Q3 2026 letter and call; Yahoo Finance earnings calendar"
+ },
+ "references": [
+  "Yelp Q3 2026 press release, 8-K Exhibit 99.1: sec.gov/Archives/edgar/data/0001345016/000134501626000072/yelpq3-26ex991pressrelease.htm",
+  "Yelp Q3 2026 shareholder letter, 8-K Exhibit 99.2: sec.gov/Archives/edgar/data/0001345016/000134501626000072/yelpq32026ex992lettertos.htm",
+  "Yelp Q3 earnings call highlights, MarketBeat (8 Nov 2026)",
+  "'Yelp ad revenue drops 6% as clicks fall 8%', PPC Land (Nov 2026)",
+  "AI Overviews share of local searches: BriefGlance (Nov 2026)",
+  "Financials, consensus, ownership and peer multiples: Yahoo Finance via research pack (15 Nov 2026)"
+ ]
+}

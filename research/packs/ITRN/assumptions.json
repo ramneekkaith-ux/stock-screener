@@ -1,0 +1,13 @@
+{
+ "overrides": {
+  "wacc": 0.115
+ },
+ "override_reasons": {
+  "wacc": "+1pt over the model's CAPM WACC for country risk: revenue is ~55% Israel and ~23% Brazil."
+ },
+ "exclude_peers": [
+  "KARO",
+  "IOT"
+ ],
+ "exclude_reason": "Karooooo's Yahoo multiples mix USD EV with ZAR earnings; Samsara is loss-making at the EBIT line."
+}
