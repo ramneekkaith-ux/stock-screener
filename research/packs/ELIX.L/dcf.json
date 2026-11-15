@@ -1,0 +1,430 @@
+{
+ "symbol": "ELIX.L",
+ "price": 484.0,
+ "price_currency": "GBp",
+ "reporting_currency": "GBP",
+ "inputs": {
+  "base_year": "2025-12-31",
+  "base_revenue": 149600000.0,
+  "years": 10,
+  "revenue_growth": [
+   0.2067,
+   0.072,
+   0.0662,
+   0.0603,
+   0.0544,
+   0.0485,
+   0.0426,
+   0.0368,
+   0.0309,
+   0.025
+  ],
+  "ebit_margin": [
+   0.1983,
+   0.2051,
+   0.2119,
+   0.2187,
+   0.2255,
+   0.2255,
+   0.2255,
+   0.2255,
+   0.2255,
+   0.2255
+  ],
+  "tax_rate": 0.2522,
+  "da_pct": 0.0388,
+  "capex_pct": 0.0022,
+  "nwc_pct": -0.1199,
+  "terminal_growth": 0.025,
+  "exit_ebitda_multiple": 9.504,
+  "risk_free": 0.045,
+  "beta_raw": 0.752,
+  "beta_adjusted": 0.834,
+  "erp": 0.05,
+  "size_premium": 0.01,
+  "cost_of_equity": 0.0967,
+  "cost_of_debt_pre_tax": 0.055,
+  "debt_weight": 0.1212,
+  "wacc": 0.09,
+  "mid_year": true,
+  "rationale": {
+   "growth": "Years 1\u20132 from analyst consensus (5 analysts: 20.7%, 7.2%); then a straight-line fade to 2.5% terminal growth by year 10.",
+   "ebit_margin": "Starts at last year's EBIT margin (19.1%) and moves to the 4-year median (22.5%) over 5 years.",
+   "tax": "Median effective tax rate (25.2%), kept within 15\u201330%.",
+   "reinvestment": "Historical medians: D&A 3.9%, capex 0.2% of revenue; working capital -12.0% of revenue, so each extra $1 of sales ties up $-0.12.",
+   "wacc": "CAPM: risk-free 4.50% (Fallback assumption (FRED IRLTLT01GBM156N unavailable)) + adjusted beta 0.83 \u00d7 ERP 5.0% + small-cap premium 1.0% = cost of equity 9.67%. Pre-tax cost of debt 5.50% (interest \u00f7 debt). Market-value weights: debt 12.1%.",
+   "exit_multiple": "Median peer EV/EBITDA (9.5x) as a cross-check terminal value."
+  },
+  "overrides": {}
+ },
+ "forecast": [
+  {
+   "year": 1,
+   "revenue": 180522320.00000003,
+   "growth": 0.2067,
+   "ebit": 35797576.05600001,
+   "ebit_margin": 0.1983,
+   "nopat": 26769427.37467681,
+   "da": 7004266.016000002,
+   "ebitda": 42801842.07200001,
+   "capex": 397149.1040000001,
+   "change_nwc": -3707586.168000004,
+   "fcff": 37084130.454676814,
+   "discount_factor": 0.9578262852211513,
+   "pv_fcff": 35520154.91405966
+  },
+  {
+   "year": 2,
+   "revenue": 193519927.04000005,
+   "growth": 0.072,
+   "ebit": 39690937.03590401,
+   "ebit_margin": 0.2051,
+   "nopat": 29680882.71544902,
+   "da": 7508573.169152002,
+   "ebitda": 47199510.20505601,
+   "capex": 425743.83948800014,
+   "change_nwc": -1558413.0840960026,
+   "fcff": 38322125.12920902,
+   "discount_factor": 0.8787397112120654,
+   "pv_fcff": 33675173.16907377
+  },
+  {
+   "year": 3,
+   "revenue": 206330946.21004805,
+   "growth": 0.0662,
+   "ebit": 43721527.50190918,
+   "ebit_margin": 0.2119,
+   "nopat": 32694958.265927687,
+   "da": 8005640.712949865,
+   "ebitda": 51727168.214859046,
+   "capex": 453928.08166210575,
+   "change_nwc": -1536041.1984887552,
+   "fcff": 41782712.095704205,
+   "discount_factor": 0.8061832212954727,
+   "pv_fcff": 33684521.43177613
+  },
+  {
+   "year": 4,
+   "revenue": 218772702.26651394,
+   "growth": 0.0603,
+   "ebit": 47845589.9856866,
+   "ebit_margin": 0.2187,
+   "nopat": 35778932.19129644,
+   "da": 8488380.847940741,
+   "ebitda": 56333970.83362734,
+   "capex": 481299.9449863307,
+   "change_nwc": -1491766.5511702609,
+   "fcff": 45277779.64542112,
+   "discount_factor": 0.7396176342160301,
+   "pv_fcff": 33488244.26390109
+  },
+  {
+   "year": 5,
+   "revenue": 230673937.26981232,
+   "growth": 0.0544,
+   "ebit": 52016972.85434268,
+   "ebit_margin": 0.2255,
+   "nopat": 38898292.30047745,
+   "da": 8950148.766068717,
+   "ebitda": 60967121.620411396,
+   "capex": 507482.6619935871,
+   "change_nwc": -1426958.076895475,
+   "fcff": 48767916.48144806,
+   "discount_factor": 0.6785482882715871,
+   "pv_fcff": 33091386.251058303
+  },
+  {
+   "year": 6,
+   "revenue": 241861623.22739822,
+   "growth": 0.0485,
+   "ebit": 54539796.0377783,
+   "ebit_margin": 0.2255,
+   "nopat": 40784859.47705062,
+   "da": 9384230.98122305,
+   "ebitda": 63924027.01900135,
+   "capex": 532095.5711002761,
+   "change_nwc": -1341403.5463145496,
+   "fcff": 50978398.43348794,
+   "discount_factor": 0.6225213653867772,
+   "pv_fcff": 31735142.19804605
+  },
+  {
+   "year": 7,
+   "revenue": 252164928.37688538,
+   "growth": 0.0426,
+   "ebit": 56863191.348987654,
+   "ebit_margin": 0.2255,
+   "nopat": 42522294.49077297,
+   "da": 9783999.221023154,
+   "ebitda": 66647190.57001081,
+   "capex": 554762.8424291479,
+   "change_nwc": -1235366.2874235115,
+   "fcff": 52986897.15679049,
+   "discount_factor": 0.5711205187034653,
+   "pv_fcff": 30261904.18867335
+  },
+  {
+   "year": 8,
+   "revenue": 261444597.74115476,
+   "growth": 0.0368,
+   "ebit": 58955756.7906304,
+   "ebit_margin": 0.2255,
+   "nopat": 44087114.92803341,
+   "da": 10144050.392356806,
+   "ebitda": 69099807.18298721,
+   "capex": 575178.1150305405,
+   "change_nwc": -1112632.3567758983,
+   "fcff": 54768619.56213557,
+   "discount_factor": 0.5239637786270323,
+   "pv_fcff": 28696772.85596295
+  },
+  {
+   "year": 9,
+   "revenue": 269523235.8113564,
+   "growth": 0.0309,
+   "ebit": 60777489.675460875,
+   "ebit_margin": 0.2255,
+   "nopat": 45449406.779309645,
+   "da": 10457501.54948063,
+   "ebitda": 71234991.2249415,
+   "capex": 592951.1187849842,
+   "change_nwc": -968628.7046171797,
+   "fcff": 56282585.91462247,
+   "discount_factor": 0.48070071433672684,
+   "pv_fcff": 27055079.253877223
+  },
+  {
+   "year": 10,
+   "revenue": 276261316.7066403,
+   "growth": 0.025,
+   "ebit": 62296926.91734739,
+   "ebit_margin": 0.2255,
+   "nopat": 46585641.948792376,
+   "da": 10718939.088217644,
+   "ebitda": 73015866.00556503,
+   "capex": 607774.8967546087,
+   "change_nwc": -807895.8993445369,
+   "fcff": 57504702.03959995,
+   "discount_factor": 0.44100982966672186,
+   "pv_fcff": 25360138.851519566
+  }
+ ],
+ "gordon": {
+  "pv_fcff": 312568517.37794816,
+  "terminal_value": 906804916.7783067,
+  "pv_terminal": 383044196.5933025,
+  "enterprise_value": 695612713.9712507,
+  "equity_value": 667094712.9712507,
+  "per_share_reporting": 13.278678983535256,
+  "per_share_price_ccy": 1327.8678983535256,
+  "tv_share_of_ev": 0.5506572679019974
+ },
+ "exit_multiple": {
+  "pv_fcff": 312568517.37794816,
+  "terminal_value": 693942790.51689,
+  "pv_terminal": 293128934.0816855,
+  "enterprise_value": 605697451.4596336,
+  "equity_value": 577179450.4596336,
+  "per_share_reporting": 11.488894289703453,
+  "per_share_price_ccy": 1148.8894289703453,
+  "tv_share_of_ev": 0.4839527281735986
+ },
+ "implied_exit_ebitda_multiple": 12.419285922174682,
+ "per_share": {
+  "value_price_ccy": 1327.8678983535256,
+  "upside": 1.7435287156064576
+ },
+ "sensitivity": {
+  "wacc": [
+   0.08,
+   0.085,
+   0.09,
+   0.095,
+   0.1
+  ],
+  "terminal_growth": [
+   0.015,
+   0.02,
+   0.025,
+   0.03,
+   0.035
+  ],
+  "value_per_share_price_ccy": [
+   [
+    1421.2216075605716,
+    1494.6328084608738,
+    1581.3915004339576,
+    1685.5019308016583,
+    1812.748012362182
+   ],
+   [
+    1313.19519670119,
+    1373.556928959427,
+    1443.97894992737,
+    1527.2049747076662,
+    1627.0762044440214
+   ],
+   [
+    1219.7599490946718,
+    1269.9529255362827,
+    1327.8678983535256,
+    1395.4353666403092,
+    1475.2878291610534
+   ],
+   [
+    1138.1693600221,
+    1180.3159470669154,
+    1228.4834751181324,
+    1284.0613921003064,
+    1348.9022952461758
+   ],
+   [
+    1066.3238362572326,
+    1102.0180365120443,
+    1142.4714634674972,
+    1188.7039514165867,
+    1242.0491298193817
+   ]
+  ]
+ },
+ "comps": [
+  {
+   "method": "EV / LTM revenue",
+   "key": "ev_revenue",
+   "peer_multiples": {
+    "p25": 1.649,
+    "median": 3.3705000000000003,
+    "p75": 17.44225
+   },
+   "n_peers": 8,
+   "company_multiple": 1.8159764754010697,
+   "implied_price": {
+    "p25": 434.27735118530614,
+    "median": 946.9096829487733,
+    "p75": 5137.2285992964735
+   }
+  },
+  {
+   "method": "EV / LTM EBITDA",
+   "key": "ev_ebitda",
+   "peer_multiples": {
+    "p25": 7.979,
+    "median": 9.504,
+    "p75": 13.406
+   },
+   "n_peers": 5,
+   "company_multiple": 7.583889250181453,
+   "implied_price": {
+    "p25": 512.1731915738022,
+    "median": 620.9126201258716,
+    "p75": 899.1429481325433
+   }
+  },
+  {
+   "method": "EV / LTM EBIT",
+   "key": "ev_ebit",
+   "peer_multiples": {
+    "p25": 11.194370830668008,
+    "median": 11.796488599571752,
+    "p75": 21.425601613060294
+   },
+   "n_peers": 5,
+   "company_multiple": 9.484693667562757,
+   "implied_price": {
+    "p25": 581.476513427235,
+    "median": 615.8060009187337,
+    "p75": 1164.8057677793356
+   }
+  },
+  {
+   "method": "P / E (LTM)",
+   "key": "pe",
+   "peer_multiples": {
+    "p25": 26.214287,
+    "median": 30.44013,
+    "p75": 31.48788
+   },
+   "n_peers": 5,
+   "company_multiple": 12.345251813566206,
+   "implied_price": {
+    "p25": 1027.7404705554454,
+    "median": 1193.4161524198212,
+    "p75": 1234.493564825677
+   }
+  }
+ ],
+ "football_field": [
+  {
+   "method": "EV / LTM revenue",
+   "group": "Trading comparables",
+   "low": 434.27735118530614,
+   "high": 5137.2285992964735,
+   "mid": 946.9096829487733,
+   "note": "1.6x\u201317.4x across 8 peers"
+  },
+  {
+   "method": "EV / LTM EBITDA",
+   "group": "Trading comparables",
+   "low": 512.1731915738022,
+   "high": 899.1429481325433,
+   "mid": 620.9126201258716,
+   "note": "8.0x\u201313.4x across 5 peers"
+  },
+  {
+   "method": "EV / LTM EBIT",
+   "group": "Trading comparables",
+   "low": 581.476513427235,
+   "high": 1164.8057677793356,
+   "mid": 615.8060009187337,
+   "note": "11.2x\u201321.4x across 5 peers"
+  },
+  {
+   "method": "P / E (LTM)",
+   "group": "Trading comparables",
+   "low": 1027.7404705554454,
+   "high": 1234.493564825677,
+   "mid": 1193.4161524198212,
+   "note": "26.2x\u201331.5x across 5 peers"
+  },
+  {
+   "method": "DCF \u2013 Gordon growth",
+   "group": "Discounted cash flow",
+   "low": 1180.3159470669154,
+   "high": 1527.2049747076662,
+   "mid": 1327.8678983535256,
+   "note": "WACC 8.5%\u20139.5%, terminal growth 2.0%\u20133.0%"
+  },
+  {
+   "method": "DCF \u2013 exit multiple",
+   "group": "Discounted cash flow",
+   "low": 1026.1032089143243,
+   "high": 1271.6756490263663,
+   "mid": 1148.8894289703453,
+   "note": "7.5x\u201311.5x EBITDA in year 10"
+  },
+  {
+   "method": "Analyst price targets",
+   "group": "Market",
+   "low": 570.0,
+   "high": 1275.0,
+   "mid": 1060.0,
+   "note": "Consensus range (Yahoo Finance)"
+  },
+  {
+   "method": "52-week trading range",
+   "group": "Market",
+   "low": 461.0,
+   "high": 879.36,
+   "mid": 484.0,
+   "note": "Last 12 months"
+  }
+ ],
+ "target": {
+  "price": 1117.516142313186,
+  "upside": 1.3089176494074093,
+  "rating": "Buy",
+  "method": "50% DCF (Gordon) + 25% EV/EBITDA comps median + 25% P/E comps median (re-weighted over whatever is available)",
+  "bands": "Buy above +15%, Sell below -10%"
+ },
+ "flags": []
+}
