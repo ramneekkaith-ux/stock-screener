@@ -1,49 +1,27 @@
 {
- "generated_at": "2026-11-15T04:22:35+00:00",
+ "generated_at": "2026-11-22T04:23:49+00:00",
  "queue": [
   {
-   "symbol": "VMD",
-   "name": "Viemed Healthcare, Inc.",
+   "symbol": "OPRA",
+   "name": "Opera Limited",
    "market": "US",
-   "sector": "Healthcare",
-   "score": 88.7,
-   "value_score": 8.33,
-   "conviction": 87.1,
-   "tag": "fair",
-   "fcf_yield": 0.0868
+   "sector": "Communication Services",
+   "score": 86.1,
+   "value_score": 9.67,
+   "conviction": 89.3,
+   "tag": "cheap",
+   "fcf_yield": 0.1099
   },
   {
-   "symbol": "FNX.L",
-   "name": "Fonix Plc",
+   "symbol": "BOKU.L",
+   "name": "Boku, Inc.",
    "market": "UK",
    "sector": "Technology",
-   "score": 89.8,
-   "value_score": 9.67,
-   "conviction": 91.9,
-   "tag": "cheap",
-   "fcf_yield": 0.0936
-  },
-  {
-   "symbol": "STRA",
-   "name": "Strategic Education, Inc.",
-   "market": "US",
-   "sector": "Consumer Defensive",
-   "score": 81.3,
+   "score": 89.5,
    "value_score": 10.0,
-   "conviction": 86.9,
+   "conviction": 92.7,
    "tag": "cheap",
-   "fcf_yield": 0.1367
-  },
-  {
-   "symbol": "GMR.L",
-   "name": "Gaming Realms plc",
-   "market": "UK",
-   "sector": "Communication Services",
-   "score": 88.8,
-   "value_score": 9.67,
-   "conviction": 91.2,
-   "tag": "cheap",
-   "fcf_yield": 0.0815
+   "fcf_yield": 0.1674
   },
   {
    "symbol": "FLXS",
@@ -51,34 +29,10 @@
    "market": "US",
    "sector": "Consumer Cyclical",
    "score": 84.0,
-   "value_score": 9.33,
-   "conviction": 86.8,
-   "tag": "cheap",
-   "fcf_yield": 0.1361
-  },
-  {
-   "symbol": "ELIX.L",
-   "name": "Elixirr International plc",
-   "market": "UK",
-   "sector": "Industrials",
-   "score": 85.9,
    "value_score": 10.0,
-   "conviction": 90.1,
+   "conviction": 88.8,
    "tag": "cheap",
-   "fcf_yield": 0.1349
-  }
- ],
- "next_best": [
-  {
-   "symbol": "FNX.L",
-   "name": "Fonix Plc",
-   "market": "UK",
-   "sector": "Technology",
-   "score": 89.8,
-   "value_score": 9.67,
-   "conviction": 91.9,
-   "tag": "cheap",
-   "fcf_yield": 0.0936
+   "fcf_yield": 0.1492
   },
   {
    "symbol": "IDHC.L",
@@ -89,117 +43,7 @@
    "value_score": 9.67,
    "conviction": 91.7,
    "tag": "cheap",
-   "fcf_yield": 0.0929
-  },
-  {
-   "symbol": "GMR.L",
-   "name": "Gaming Realms plc",
-   "market": "UK",
-   "sector": "Communication Services",
-   "score": 88.8,
-   "value_score": 9.67,
-   "conviction": 91.2,
-   "tag": "cheap",
-   "fcf_yield": 0.0815
-  },
-  {
-   "symbol": "ABDP.L",
-   "name": "AB Dynamics plc",
-   "market": "UK",
-   "sector": "Consumer Cyclical",
-   "score": 86.2,
-   "value_score": 10.0,
-   "conviction": 90.3,
-   "tag": "cheap",
-   "fcf_yield": 0.1275
-  },
-  {
-   "symbol": "ELIX.L",
-   "name": "Elixirr International plc",
-   "market": "UK",
-   "sector": "Industrials",
-   "score": 85.9,
-   "value_score": 10.0,
-   "conviction": 90.1,
-   "tag": "cheap",
-   "fcf_yield": 0.1349
-  },
-  {
-   "symbol": "TRN.L",
-   "name": "Trainline plc",
-   "market": "UK",
-   "sector": "Consumer Cyclical",
-   "score": 84.7,
-   "value_score": 10.0,
-   "conviction": 89.3,
-   "tag": "cheap",
-   "fcf_yield": 0.1251
-  },
-  {
-   "symbol": "ALFA.L",
-   "name": "Alfa Financial Software Holdings PLC",
-   "market": "UK",
-   "sector": "Technology",
-   "score": 91.1,
-   "value_score": 8.33,
-   "conviction": 88.8,
-   "tag": "cheap",
-   "fcf_yield": 0.0632
-  },
-  {
-   "symbol": "BOKU.L",
-   "name": "Boku, Inc.",
-   "market": "UK",
-   "sector": "Technology",
-   "score": 89.5,
-   "value_score": 8.67,
-   "conviction": 88.7,
-   "tag": "fair",
-   "fcf_yield": 0.1464
-  },
-  {
-   "symbol": "ACSO.L",
-   "name": "accesso Technology Group plc",
-   "market": "UK",
-   "sector": "Technology",
-   "score": 82.8,
-   "value_score": 10.0,
-   "conviction": 88.0,
-   "tag": "cheap",
-   "fcf_yield": 0.1842
-  },
-  {
-   "symbol": "SUP.L",
-   "name": "Supreme Plc",
-   "market": "UK",
-   "sector": "Industrials",
-   "score": 83.3,
-   "value_score": 9.67,
-   "conviction": 87.3,
-   "tag": "cheap",
-   "fcf_yield": 0.0909
-  },
-  {
-   "symbol": "SRB.L",
-   "name": "Serabi Gold plc",
-   "market": "UK",
-   "sector": "Basic Materials",
-   "score": 81.9,
-   "value_score": 10.0,
-   "conviction": 87.3,
-   "tag": "cheap",
-   "fcf_yield": 0.2097
-  },
-  {
-   "symbol": "VMD",
-   "name": "Viemed Healthcare, Inc.",
-   "market": "US",
-   "sector": "Healthcare",
-   "score": 88.7,
-   "value_score": 8.33,
-   "conviction": 87.1,
-   "tag": "fair",
-   "fcf_yield": 0.0868
+   "fcf_yield": 0.0958
   },
   {
    "symbol": "STRA",
@@ -210,7 +54,119 @@
    "value_score": 10.0,
    "conviction": 86.9,
    "tag": "cheap",
-   "fcf_yield": 0.1367
+   "fcf_yield": 0.1475
+  },
+  {
+   "symbol": "ELIX.L",
+   "name": "Elixirr International plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 85.9,
+   "value_score": 10.0,
+   "conviction": 90.1,
+   "tag": "cheap",
+   "fcf_yield": 0.1419
+  }
+ ],
+ "next_best": [
+  {
+   "symbol": "BOKU.L",
+   "name": "Boku, Inc.",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 89.5,
+   "value_score": 10.0,
+   "conviction": 92.7,
+   "tag": "cheap",
+   "fcf_yield": 0.1674
+  },
+  {
+   "symbol": "FNX.L",
+   "name": "Fonix Plc",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 89.8,
+   "value_score": 9.67,
+   "conviction": 91.9,
+   "tag": "cheap",
+   "fcf_yield": 0.1056
+  },
+  {
+   "symbol": "IDHC.L",
+   "name": "Integrated Diagnostics Holdings plc",
+   "market": "UK",
+   "sector": "Healthcare",
+   "score": 89.5,
+   "value_score": 9.67,
+   "conviction": 91.7,
+   "tag": "cheap",
+   "fcf_yield": 0.0958
+  },
+  {
+   "symbol": "GMR.L",
+   "name": "Gaming Realms plc",
+   "market": "UK",
+   "sector": "Communication Services",
+   "score": 88.8,
+   "value_score": 9.67,
+   "conviction": 91.2,
+   "tag": "cheap",
+   "fcf_yield": 0.0838
+  },
+  {
+   "symbol": "ABDP.L",
+   "name": "AB Dynamics plc",
+   "market": "UK",
+   "sector": "Consumer Cyclical",
+   "score": 86.2,
+   "value_score": 10.0,
+   "conviction": 90.3,
+   "tag": "cheap",
+   "fcf_yield": 0.1302
+  },
+  {
+   "symbol": "ELIX.L",
+   "name": "Elixirr International plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 85.9,
+   "value_score": 10.0,
+   "conviction": 90.1,
+   "tag": "cheap",
+   "fcf_yield": 0.1419
+  },
+  {
+   "symbol": "OPRA",
+   "name": "Opera Limited",
+   "market": "US",
+   "sector": "Communication Services",
+   "score": 86.1,
+   "value_score": 9.67,
+   "conviction": 89.3,
+   "tag": "cheap",
+   "fcf_yield": 0.1099
+  },
+  {
+   "symbol": "TRN.L",
+   "name": "Trainline plc",
+   "market": "UK",
+   "sector": "Consumer Cyclical",
+   "score": 84.7,
+   "value_score": 10.0,
+   "conviction": 89.3,
+   "tag": "cheap",
+   "fcf_yield": 0.127
+  },
+  {
+   "symbol": "ALFA.L",
+   "name": "Alfa Financial Software Holdings PLC",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 91.2,
+   "value_score": 8.33,
+   "conviction": 88.8,
+   "tag": "cheap",
+   "fcf_yield": 0.0656
   },
   {
    "symbol": "FLXS",
@@ -218,21 +174,76 @@
    "market": "US",
    "sector": "Consumer Cyclical",
    "score": 84.0,
-   "value_score": 9.33,
-   "conviction": 86.8,
+   "value_score": 10.0,
+   "conviction": 88.8,
    "tag": "cheap",
-   "fcf_yield": 0.1361
+   "fcf_yield": 0.1492
   },
   {
-   "symbol": "CMCL.L",
-   "name": "Caledonia Mining Corporation Plc",
+   "symbol": "ACSO.L",
+   "name": "accesso Technology Group plc",
+   "market": "UK",
+   "sector": "Technology",
+   "score": 82.8,
+   "value_score": 10.0,
+   "conviction": 88.0,
+   "tag": "cheap",
+   "fcf_yield": 0.1733
+  },
+  {
+   "symbol": "SUP.L",
+   "name": "Supreme Plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 83.3,
+   "value_score": 9.67,
+   "conviction": 87.3,
+   "tag": "cheap",
+   "fcf_yield": 0.092
+  },
+  {
+   "symbol": "SRB.L",
+   "name": "Serabi Gold plc",
    "market": "UK",
    "sector": "Basic Materials",
-   "score": 81.1,
+   "score": 81.9,
    "value_score": 10.0,
-   "conviction": 86.8,
+   "conviction": 87.3,
    "tag": "cheap",
-   "fcf_yield": 0.127
+   "fcf_yield": 0.2579
+  },
+  {
+   "symbol": "VMD",
+   "name": "Viemed Healthcare, Inc.",
+   "market": "US",
+   "sector": "Healthcare",
+   "score": 88.7,
+   "value_score": 8.33,
+   "conviction": 87.1,
+   "tag": "fair",
+   "fcf_yield": 0.0935
+  },
+  {
+   "symbol": "ALTN.L",
+   "name": "AltynGold plc",
+   "market": "UK",
+   "sector": "Basic Materials",
+   "score": 81.5,
+   "value_score": 10.0,
+   "conviction": 87.0,
+   "tag": "cheap",
+   "fcf_yield": 0.1381
+  },
+  {
+   "symbol": "STRA",
+   "name": "Strategic Education, Inc.",
+   "market": "US",
+   "sector": "Consumer Defensive",
+   "score": 81.3,
+   "value_score": 10.0,
+   "conviction": 86.9,
+   "tag": "cheap",
+   "fcf_yield": 0.1475
   },
   {
    "symbol": "YU.L",
@@ -246,6 +257,17 @@
    "fcf_yield": 0.096
   },
   {
+   "symbol": "FAN.L",
+   "name": "Volution Group plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 87.5,
+   "value_score": 8.33,
+   "conviction": 86.2,
+   "tag": "fair",
+   "fcf_yield": 0.0838
+  },
+  {
    "symbol": "CXM",
    "name": "Sprinklr, Inc.",
    "market": "US",
@@ -254,7 +276,7 @@
    "value_score": 10.0,
    "conviction": 86.2,
    "tag": "cheap",
-   "fcf_yield": 0.1238
+   "fcf_yield": 0.1286
   },
   {
    "symbol": "COLL",
@@ -265,18 +287,7 @@
    "value_score": 10.0,
    "conviction": 86.1,
    "tag": "cheap",
-   "fcf_yield": 0.4274
-  },
-  {
-   "symbol": "ALTN.L",
-   "name": "AltynGold plc",
-   "market": "UK",
-   "sector": "Basic Materials",
-   "score": 81.5,
-   "value_score": 9.67,
-   "conviction": 86.0,
-   "tag": "cheap",
-   "fcf_yield": 0.1138
+   "fcf_yield": 0.4378
   },
   {
    "symbol": "MAKO",
@@ -287,7 +298,7 @@
    "value_score": 9.67,
    "conviction": 85.8,
    "tag": "cheap",
-   "fcf_yield": 0.0865
+   "fcf_yield": 0.1053
   },
   {
    "symbol": "FRP.L",
@@ -298,18 +309,29 @@
    "value_score": 7.67,
    "conviction": 85.7,
    "tag": "fair",
-   "fcf_yield": 0.0684
+   "fcf_yield": 0.0713
   },
   {
-   "symbol": "BRBR",
-   "name": "BellRing Brands, Inc.",
+   "symbol": "UPWK",
+   "name": "Upwork Inc.",
    "market": "US",
-   "sector": "Consumer Defensive",
-   "score": 79.6,
+   "sector": "Communication Services",
+   "score": 79.3,
    "value_score": 10.0,
-   "conviction": 85.7,
+   "conviction": 85.5,
    "tag": "cheap",
-   "fcf_yield": 0.1832
+   "fcf_yield": 0.1488
+  },
+  {
+   "symbol": "GFRD.L",
+   "name": "Galliford Try Holdings plc",
+   "market": "UK",
+   "sector": "Industrials",
+   "score": 79.3,
+   "value_score": 10.0,
+   "conviction": 85.5,
+   "tag": "cheap",
+   "fcf_yield": 0.1227
   },
   {
    "symbol": "PAY.L",
@@ -320,29 +342,7 @@
    "value_score": 10.0,
    "conviction": 85.5,
    "tag": "cheap",
-   "fcf_yield": 0.2236
-  },
-  {
-   "symbol": "OPRA",
-   "name": "Opera Limited",
-   "market": "US",
-   "sector": "Communication Services",
-   "score": 86.1,
-   "value_score": 8.33,
-   "conviction": 85.3,
-   "tag": "fair",
-   "fcf_yield": 0.0813
-  },
-  {
-   "symbol": "GOOS",
-   "name": "Canada Goose Holdings Inc.",
-   "market": "US",
-   "sector": "Consumer Cyclical",
-   "score": 78.8,
-   "value_score": 10.0,
-   "conviction": 85.2,
-   "tag": "cheap",
-   "fcf_yield": 0.2039
+   "fcf_yield": 0.2875
   }
  ]
 }
